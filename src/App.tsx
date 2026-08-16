@@ -24,13 +24,13 @@ const days: Day[] = [
     {time:"13:00",title:"日本桥电电城 + 黑门",meta:"Animate / Mandarake / 骏河屋",place:"Nipponbashi Denden Town",kind:"shopping"},
     {time:"16:30",title:"梅田城市漫游",meta:"Grand Front / LUCUA / 阪急",note:"体力有余再上梅田蓝天大厦。",place:"Umeda Osaka",kind:"shopping"},
   ]},
-  { date:"8.30",dow:"周日",city:"京都 → 四日市",theme:"城与漫画 · 海上花火",accent:"FIREWORKS",cost:"交通 ¥11,980",map:"Yokkaichi Dome",stops:[
+  { date:"8.30",dow:"周日",city:"京都 → 四日市",theme:"城与漫画 · 海上花火",accent:"FIREWORKS",cost:"交通 ¥12,520",map:"Yokkaichi Dome",stops:[
     {time:"06:30",title:"天气 / 雷电 / 铁路首检",meta:"不满足条件即取消花火",note:"官方取消、强雷暴大风、严重铁路中断或身体不适：从京都直接回堺。",kind:"event"},
     {time:"08:45",title:"二条城与二之丸御殿",meta:"门票 ¥1,300",place:"Nijo Castle Kyoto",kind:"culture"},
     {time:"10:20",title:"京都国际漫画博物馆",meta:"门票 ¥1,200",place:"Kyoto International Manga Museum",kind:"culture"},
     {time:"12:45",title:"京都御苑南侧",meta:"轻量散步 · 50 分钟",place:"Kyoto Gyoen National Garden",kind:"nature"},
     {time:"14:05",title:"京都站补给 + 二次检查",meta:"便当、水、车次与天气",place:"Kyoto Station",kind:"event"},
-    {time:"15:14",title:"新干线 Nozomi 156 → 名古屋",meta:"指定席 · 15:48 抵达 · 约 ¥5,170",place:"Kyoto Station",kind:"move"},
+    {time:"15:14",title:"新干线 NOZOMI 428 → 名古屋",meta:"smart EX 已预订 · 15:48 抵达 · ¥5,710",note:"普通车 · 成人 1 名；邮件注明车次与座席将在 8/30 05:30 后最终确认。",place:"Kyoto Station",kind:"move"},
     {time:"16:22",title:"JR 名古屋 → 富田浜",meta:"17:01 抵达 · ¥680",place:"Tomidahama Station",kind:"move"},
     {time:"17:35",title:"北侧免费观赏区就位",meta:"四日市巨蛋 / 霞浦绿地东侧",note:"选靠撤离方向的位置；矶津南区仅作备选。",place:"Yokkaichi Dome",kind:"event"},
     {time:"19:15",title:"四日市花火大会",meta:"约 45 分钟",place:"Yokkaichi Dome",kind:"event"},
@@ -73,7 +73,7 @@ const routes:Route[][]=[
   [
     {after:0,time:"约 85 分",from:"Hotel Agora Regency 正门",to:"二条城东大手门",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"元離宮二条城 東大手門, 〒604-8301 京都府京都市中京区二条城町541",line:"南海 → Metro → JR / 地铁",detail:"难波、京都站方向换乘",fare:"约 ¥1,110",alt:"南海 → 难波 → 近铁京都 → 地铁",altFare:"约 ¥1,300"},
     {after:1,time:"步行 18 分",from:"二条城东大手门",to:"京都国际漫画博物馆正门",fromAddress:"元離宮二条城 東大手門, 〒604-8301 京都府京都市中京区二条城町541",toAddress:"京都国際マンガミュージアム, 〒604-0846 京都府京都市中京区金吹町452",line:"步行",detail:"沿押小路通向乌丸御池",fare:"¥0",alt:"地铁 二条城前 → 乌丸御池",altFare:"¥220"},
-    {after:4,time:"34 分",from:"JR 京都站新干线中央口",to:"JR 名古屋站新干线口",fromAddress:"JR京都駅 新幹線中央口, 〒600-8214 京都府京都市下京区東塩小路高倉町8-3",toAddress:"JR名古屋駅 新幹線口, 〒450-0002 愛知県名古屋市中村区名駅1丁目1-4",line:"东海道新干线 Nozomi 156",detail:"15:14 → 15:48 · 指定席",fare:"约 ¥5,170",alt:"后续 Nozomi / Hikari 指定席",altFare:"同级约 ¥5,170",note:"优先提前锁定靠过道座。"},
+    {after:4,time:"34 分",from:"JR 京都站新干线中央口",to:"JR 名古屋站新干线口",fromAddress:"JR京都駅 新幹線中央口, 〒600-8214 京都府京都市下京区東塩小路高倉町8-3",toAddress:"JR名古屋駅 新幹線口, 〒450-0002 愛知県名古屋市中村区名駅1丁目1-4",line:"东海道新干线 NOZOMI 428",detail:"15:14 → 15:48 · smart EX 已预订",fare:"¥5,710",alt:"后续 NOZOMI / HIKARI 指定席",altFare:"按改签时显示价格",note:"普通车 · 成人 1 名；车次与座席将在 8/30 05:30 后最终确认。"},
     {after:5,time:"39 分",from:"JR 名古屋站关西本线月台",to:"JR 富田浜站",fromAddress:"JR名古屋駅, 〒450-0002 愛知県名古屋市中村区名駅1丁目1-4",toAddress:"JR富田浜駅, 〒510-8008 三重県四日市市富田浜町",line:"JR 关西本线",detail:"16:22 → 17:01",fare:"¥680",alt:"近铁名古屋 → 近铁富田 + 步行",altFare:"约 ¥760"},
     {after:6,time:"步行 34 分",from:"JR 富田浜站",to:"四日市巨蛋北侧入口",fromAddress:"JR富田浜駅, 〒510-8008 三重県四日市市富田浜町",toAddress:"四日市ドーム, 〒510-0012 三重県四日市市大字羽津甲5169",line:"官方步行路线",detail:"沿霞浦绿地水道东侧",fare:"¥0",alt:"矶津南侧免费区",altFare:"交通另计"},
     {after:9,time:"约 65 分",from:"四日市巨蛋北侧观赏区",to:"近铁四日市站北口",fromAddress:"四日市ドーム, 〒510-0012 三重県四日市市大字羽津甲5169",toAddress:"近鉄四日市駅 北口, 〒510-0075 三重県四日市市安島1丁目1-56",line:"步行 → JR → 步行",detail:"20:35 富田浜 / 20:42 JR 四日市 / 21:15 近铁",fare:"JR ¥190",alt:"20:30 富田浜早一班",altFare:"¥190",note:"JR 四日市中转点：〒510-0093 三重県四日市市本町3-85；不依赖出租车。"},
@@ -129,7 +129,7 @@ const facilityLabels:Record<Facility,{label:string;query:string;icon:string}>={
 const checklist=[
   ["vermeer","8/20 12:00 提交维米尔追加抽选","最晚 8/24 12:00"],
   ["result","8/27 约 15:00 查抽选结果并保存 QR","P0"],
-  ["trains","预订 8/30 新干线 15:14 与近铁特急 21:59","P0"],
+  ["trains","新干线已订；继续预订 8/30 近铁特急 21:59","P0"],
   ["flight","补齐往返航班、航站楼与值机信息","P0"],
   ["beef","按需预约神户牛晚餐","可选"],
   ["weather","出发前 7 天检查台风、花火公告与车次","7 DAYS"],
@@ -141,7 +141,7 @@ const sources=[
 ];
 const bookings=[
   {day:"8.29",level:"必须",title:"维米尔追加抽选",time:"8/20 12:00—8/24 12:00",detail:"8/27 约 15:00 公布结果；现场不售当日票。",price:"一般 ¥3,000 / 学生 ¥1,500",links:[["进入官方抽选 / 购票","https://vermeer2026.exhibit.jp/tickets/"],["展览规则","https://vermeer2026.exhibit.jp/overview/"]]},
-  {day:"8.30",level:"必须",title:"京都 → 名古屋 新干线",time:"Nozomi 156 · 15:14—15:48",detail:"SmartEX 选择 8/30、京都、名古屋、指定席；建议靠过道。",price:"约 ¥5,170",links:[["SmartEX 官方预订","https://smart-ex.jp/en/index.php"],["预订操作说明","https://smart-ex.jp/en/reservation/reserve_smart/sp/"]]},
+  {day:"8.30",level:"已预订",title:"京都 → 名古屋 新干线",time:"NOZOMI 428 · 15:14—15:48",detail:"smart EX · 普通车 · 成人 1 名。邮件注明车次与座席将在 8/30 05:30 后最终确认，请当天早晨复核。",price:"已付 ¥5,710",links:[["SmartEX 管理预订","https://shinkansen2.jr-central.co.jp/RSV_P/S_smart_en_index.htm"],["乘车指南","https://smart-ex.jp/en/"]]},
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},
   {day:"8.30",level:"建议",title:"二条城 + 二之丸御殿",time:"08:45 入场",detail:"二之丸无需预约，但提前买 Web Ticket 可减少现场排队；本丸御殿则必须预约，本计划不进入本丸。",price:"¥1,300",links:[["官方票务说明 / 购票","https://nijo-jocastle.city.kyoto.lg.jp/admission/ticket/?lang=en"]]},
   {day:"8.30",level:"建议",title:"京都国际漫画博物馆",time:"10:20 入场",detail:"普通参观可现场购票；官网提供个人电子票，适合提前保存。",price:"¥1,200",links:[["个人电子票","https://www.e-tix.jp/kyotomm/en/"],["开放时间与票价","https://kyotomm.jp/en/opentime-cost/"]]},

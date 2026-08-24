@@ -13,13 +13,13 @@ const days: Day[] = [
     {time:"15:25",title:"抵达关西机场",meta:"入境、行李 · 约 65 分钟",note:"航班时间仍为暂定；若延误超过 60 分钟，直接取消港口散步。",place:"Kansai International Airport",kind:"move"},
     {time:"16:40",title:"南海机场急行 → 堺",meta:"约 45 分钟 · ¥760",note:"舒适备选：Rapi:t β。注意 α 不停堺站。",place:"Sakai Station Osaka",kind:"move"},
     {time:"17:25",title:"酒店入住",meta:"Hotel Agora Regency Osaka Sakai",place:"Hotel Agora Regency Osaka Sakai",kind:"event"},
-    {time:"18:20",title:"堺旧港与旧灯塔",meta:"港湾散步 · 视体力与天气",note:"旧堺灯塔 → 大浜公园，拍完暮色就回到堺站周边。",place:"Old Sakai Lighthouse",kind:"nature"},
-    {time:"19:50",title:"堺站晚餐",meta:"寿司 / 海鲜 / 居酒屋",place:"Sakai Station Osaka restaurants",kind:"food"},
+    {time:"18:00",title:"堺旧港与旧灯塔",meta:"港湾短线 · 最晚 18:30 返程",note:"仅走旧堺灯塔短线；18:30 必须返回，预留时间回酒店参加 19:00 晚餐。",place:"Old Sakai Lighthouse",kind:"nature"},
+    {time:"19:00",title:"酒店 1F 晚餐",meta:"已预订 · 预约详情见本人 Gmail",note:"按预约时间到达酒店 1 楼餐厅；公开行程不显示人数、金额、菜单或预约编号。",place:"All Day Dining & Lounge the LOOP Hotel Agora Regency Osaka Sakai",kind:"food"},
   ]},
   { date:"8.29",dow:"周六",city:"大阪",theme:"维米尔 · 动漫 · 梅田",accent:"ART DAY",cost:"交通 ¥1,200",map:"Nakanoshima Museum of Art Osaka",stops:[
     {time:"07:45",title:"从堺出发",meta:"南海 + 周末 Enjoy Eco Card",note:"Eco Card ¥620，当日地铁巴士畅行。",place:"Sakai Station Osaka",kind:"move"},
     {time:"08:40",title:"中之岛建筑散步",meta:"河岸 · 45 分钟",place:"Nakanoshima Osaka",kind:"nature"},
-    {time:"09:30",title:"维米尔《戴珍珠耳环的少女》",meta:"大阪中之岛美术馆 5F · 2 小时",note:"追加抽选：8/20 12:00—8/24 12:00；8/27 约 15:00 公布。现场不售当日票。",place:"Nakanoshima Museum of Art Osaka",kind:"culture"},
+    {time:"10:00*",title:"维米尔《戴珍珠耳环的少女》",meta:"追加抽选已申请 · 首选 10:00 · 约 2 小时",note:"8/27 约 15:00 公布结果；备选 11:00、12:00、13:00，最终入场时间以中签通知为准。现场不售当日票。",place:"Nakanoshima Museum of Art Osaka",kind:"culture"},
     {time:"11:30",title:"中之岛午餐",meta:"避开正午暴晒",place:"Nakanoshima Osaka restaurants",kind:"food"},
     {time:"13:00",title:"日本桥电电城 + 黑门",meta:"Animate / Mandarake / 骏河屋",place:"Nipponbashi Denden Town",kind:"shopping"},
     {time:"16:30",title:"梅田城市漫游",meta:"Grand Front / LUCUA / 阪急",note:"体力有余再上梅田蓝天大厦。",place:"Umeda Osaka",kind:"shopping"},
@@ -62,7 +62,7 @@ const routes:Route[][]=[
   [
     {after:0,time:"约 45 分",from:"关西机场 T1 南海关西机场站",to:"南海堺站西口",fromAddress:"関西空港駅（南海）, 〒549-0011 大阪府泉南郡田尻町泉州空港中1",toAddress:"南海 堺駅 西口, 〒590-0985 大阪府堺市堺区戎島町3丁22-1",line:"南海机场急行",detail:"直达 · 无需换乘",fare:"¥760",alt:"Rapi:t β 指定席 · 更舒适、约 35 分",altFare:"¥1,410",note:"Rapi:t α 不停堺站。"},
     {after:2,time:"步行 18 分",from:"Hotel Agora Regency 正门",to:"旧堺灯塔",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"旧堺燈台, 〒590-0974 大阪府堺市堺区大浜北町5丁1",line:"步行",detail:"沿港湾西行",fare:"¥0",alt:"出租车 · 约 5 分",altFare:"约 ¥900"},
-    {after:3,time:"步行 20 分",from:"旧堺灯塔",to:"PLATPLAT 堺站餐饮区",fromAddress:"旧堺燈台, 〒590-0974 大阪府堺市堺区大浜北町5丁1",toAddress:"プラットプラット, 〒590-0985 大阪府堺市堺区戎島町3丁22-1",line:"步行",detail:"经大浜公园返回",fare:"¥0",alt:"出租车 · 约 6 分",altFare:"约 ¥800"},
+    {after:3,time:"步行约 20 分",from:"旧堺灯塔",to:"酒店 1F the LOOP",fromAddress:"旧堺燈台, 〒590-0974 大阪府堺市堺区大浜北町5丁1",toAddress:"All Day Dining & Lounge the LOOP, ホテル アゴーラ リージェンシー 大阪堺 1F, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"步行",detail:"经大浜公园返回；18:30 前离开灯塔",fare:"¥0",alt:"出租车 · 约 5 分",altFare:"约 ¥800",note:"19:00 已预约，迟到超过 20 分钟可能被取消。"},
   ],
   [
     {after:0,time:"约 50 分",from:"南海堺站西口",to:"大阪中之岛美术馆正门",fromAddress:"南海 堺駅 西口, 〒590-0985 大阪府堺市堺区戎島町3丁22-1",toAddress:"大阪中之島美術館, 〒530-0005 大阪府大阪市北区中之島4丁目3-1",line:"南海本线 → Osaka Metro",detail:"难波换乘御堂筋线至淀屋桥，再步行至馆",fare:"南海 ¥290 + 通票覆盖",alt:"全程按次付费",altFare:"约 ¥530"},
@@ -127,8 +127,9 @@ const facilityLabels:Record<Facility,{label:string;query:string;icon:string}>={
   none:{label:"地点 / 路线",query:"",icon:"⌖"},smoking:{label:"吸烟所",query:"喫煙所",icon:"🚬"},convenience:{label:"便利店",query:"コンビニ",icon:"▣"},toilet:{label:"公共卫生间",query:"公衆トイレ",icon:"WC"},postoffice:{label:"邮局",query:"郵便局",icon:"〒"},bookstore:{label:"书店",query:"書店",icon:"本"},souvenir:{label:"明信片 / 周边",query:"ポストカード お土産 グッズ",icon:"✦"},
 };
 const checklist=[
-  ["vermeer","8/20 12:00 提交维米尔追加抽选","最晚 8/24 12:00"],
+  ["vermeer","维米尔追加抽选已提交","已完成"],
   ["result","8/27 约 15:00 查抽选结果并保存 QR","P0"],
+  ["loop-dinner","8/28 19:00 到酒店 1F 用餐","已预订"],
   ["trains","新干线已订；继续预订 8/30 近铁特急 21:59","P0"],
   ["flight","补齐往返航班、航站楼与值机信息","P0"],
   ["beef","按需预约神户牛晚餐","可选"],
@@ -140,7 +141,8 @@ const sources=[
   ["维米尔展票务","https://vermeer2026.exhibit.jp/tickets/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["二条城票价","https://nijo-jocastle.city.kyoto.lg.jp/admission/fee/?lang=en"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
 ];
 const bookings=[
-  {day:"8.29",level:"必须",title:"维米尔追加抽选",time:"8/20 12:00—8/24 12:00",detail:"8/27 约 15:00 公布结果；现场不售当日票。",price:"一般 ¥3,000 / 学生 ¥1,500",links:[["进入官方抽选 / 购票","https://vermeer2026.exhibit.jp/tickets/"],["展览规则","https://vermeer2026.exhibit.jp/overview/"]]},
+  {day:"8.28",level:"已预订",title:"酒店 1F 晚餐",time:"19:00",detail:"预约已确认；人数、金额、菜单和预约编号仅保留在本人 Gmail 邮件中。",price:"详情不公开",links:[["查看预约邮件（需登录本人 Gmail）","https://mail.google.com/mail/#all/1a022be191cb3766"],["餐厅官方页面","https://www.agoraregency-sakai.com/restaurants/loop/"]]},
+  {day:"8.29",level:"已申请",title:"维米尔追加抽选",time:"首选 10:00 · 备选 11:00 / 12:00 / 13:00",detail:"追加抽选已提交；8/27 约 15:00 公布结果。中签后保存电子票与入场时段；现场不售当日票。",price:"一般 ¥3,000 / 学生 ¥1,500",links:[["票务与结果说明","https://vermeer2026.exhibit.jp/tickets/"],["展览规则","https://vermeer2026.exhibit.jp/overview/"]]},
   {day:"8.30",level:"已预订",title:"京都 → 名古屋 新干线",time:"NOZOMI 428 · 15:14—15:48",detail:"smart EX · 普通车 · 成人 1 名。邮件注明车次与座席将在 8/30 05:30 后最终确认，请当天早晨复核。",price:"已付 ¥5,710",links:[["SmartEX 管理预订","https://shinkansen2.jr-central.co.jp/RSV_P/S_smart_en_index.htm"],["乘车指南","https://smart-ex.jp/en/"]]},
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},
   {day:"8.30",level:"建议",title:"二条城 + 二之丸御殿",time:"08:45 入场",detail:"二之丸无需预约，但提前买 Web Ticket 可减少现场排队；本丸御殿则必须预约，本计划不进入本丸。",price:"¥1,300",links:[["官方票务说明 / 购票","https://nijo-jocastle.city.kyoto.lg.jp/admission/ticket/?lang=en"]]},

@@ -24,12 +24,12 @@ const days: Day[] = [
     {time:"13:00",title:"日本桥电电城 + 黑门",meta:"Animate / Mandarake / 骏河屋",place:"Nipponbashi Denden Town",kind:"shopping"},
     {time:"16:30",title:"梅田城市漫游",meta:"Grand Front / LUCUA / 阪急",note:"体力有余再上梅田蓝天大厦。",place:"Umeda Osaka",kind:"shopping"},
   ]},
-  { date:"8.30",dow:"周日",city:"京都 → 四日市",theme:"城与漫画 · 海上花火",accent:"FIREWORKS",cost:"交通 ¥12,520",map:"Yokkaichi Dome",stops:[
+  { date:"8.30",dow:"周日",city:"京都 → 四日市",theme:"御苑与漫画 · 海上花火",accent:"FIREWORKS",cost:"交通 ¥12,520",map:"Yokkaichi Dome",stops:[
     {time:"06:30",title:"天气 / 雷电 / 铁路首检",meta:"不满足条件即取消花火",note:"官方取消、强雷暴大风、严重铁路中断或身体不适：从京都直接回堺。",kind:"event"},
-    {time:"08:45",title:"二条城与二之丸御殿",meta:"门票 ¥1,300",place:"Nijo Castle Kyoto",kind:"culture"},
-    {time:"10:20",title:"京都国际漫画博物馆",meta:"门票 ¥1,200",place:"Kyoto International Manga Museum",kind:"culture"},
-    {time:"12:45",title:"京都御苑南侧",meta:"轻量散步 · 50 分钟",place:"Kyoto Gyoen National Garden",kind:"nature"},
-    {time:"14:05",title:"京都站补给 + 二次检查",meta:"便当、水、车次与天气",place:"Kyoto Station",kind:"event"},
+    {time:"08:50",title:"京都御苑南侧",meta:"免费 · 树荫短线约 50 分钟",note:"从堺町御门进入，只走九条池至南侧林荫；高温或下雨时缩短至 20 分钟。",place:"Kyoto Gyoen National Garden Sakaimachi Gate",kind:"nature"},
+    {time:"10:20",title:"京都国际漫画博物馆",meta:"现场出示地铁一日券 ¥960",note:"普通票通常不会售罄；不要提前买电子票，到接待处出示当天有效的京都地铁一日券享八折。",place:"Kyoto International Manga Museum",kind:"culture"},
+    {time:"12:20",title:"乌丸御池午餐与咖啡",meta:"室内休整 · 约 70 分钟",place:"Karasuma Oike Kyoto restaurants",kind:"food"},
+    {time:"13:40",title:"京都站补给 + 二次检查",meta:"提前进站 · 便当、水、车次与天气",place:"Kyoto Station",kind:"event"},
     {time:"15:14",title:"新干线 NOZOMI 428 → 名古屋",meta:"smart EX 已预订 · 15:48 抵达 · ¥5,710",note:"普通车 · 成人 1 名；邮件注明车次与座席将在 8/30 05:30 后最终确认。",place:"Kyoto Station",kind:"move"},
     {time:"16:22",title:"JR 名古屋 → 富田浜",meta:"17:01 抵达 · ¥680",place:"Tomidahama Station",kind:"move"},
     {time:"17:35",title:"北侧免费观赏区就位",meta:"四日市巨蛋 / 霞浦绿地东侧",note:"选靠撤离方向的位置；矶津南区仅作备选。",place:"Yokkaichi Dome",kind:"event"},
@@ -71,8 +71,9 @@ const routes:Route[][]=[
     {after:5,time:"约 40 分",from:"Grand Front Osaka 南馆",to:"Hotel Agora Regency 正门",fromAddress:"グランフロント大阪 南館, 〒530-0011 大阪府大阪市北区大深町4-20",toAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"Metro → 南海本线",detail:"梅田 → 难波换乘，堺站西口出站",fare:"通票覆盖 + 南海 ¥290",alt:"JR 大阪环状线 → 新今宫 → 南海",altFare:"约 ¥510"},
   ],
   [
-    {after:0,time:"约 85 分",from:"Hotel Agora Regency 正门",to:"二条城东大手门",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"元離宮二条城 東大手門, 〒604-8301 京都府京都市中京区二条城町541",line:"南海 → Metro → JR / 地铁",detail:"难波、京都站方向换乘",fare:"约 ¥1,110",alt:"南海 → 难波 → 近铁京都 → 地铁",altFare:"约 ¥1,300"},
-    {after:1,time:"步行 18 分",from:"二条城东大手门",to:"京都国际漫画博物馆正门",fromAddress:"元離宮二条城 東大手門, 〒604-8301 京都府京都市中京区二条城町541",toAddress:"京都国際マンガミュージアム, 〒604-0846 京都府京都市中京区金吹町452",line:"步行",detail:"沿押小路通向乌丸御池",fare:"¥0",alt:"地铁 二条城前 → 乌丸御池",altFare:"¥220"},
+    {after:0,time:"约 85 分",from:"Hotel Agora Regency 正门",to:"京都御苑 堺町御门",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"京都御苑 堺町御門, 〒602-0881 京都府京都市上京区京都御苑3",line:"南海 → Metro → JR / 京都地铁",detail:"难波、京都站方向换乘；京都站乘乌丸线至丸太町",fare:"约 ¥1,110",alt:"抵达京都站后出租车到堺町御门",altFare:"约 ¥1,500"},
+    {after:1,time:"步行约 15 分",from:"京都御苑 堺町御门",to:"京都国际漫画博物馆正门",fromAddress:"京都御苑 堺町御門, 〒602-0881 京都府京都市上京区京都御苑3",toAddress:"京都国際マンガミュージアム, 〒604-0846 京都府京都市中京区金吹町452",line:"寺町通 / 夷川通步行",detail:"以南侧林荫短线为主，不横穿整个御苑",fare:"¥0",alt:"丸太町 → 乌丸御池 乘地铁 1 站",altFare:"地铁一日券覆盖"},
+    {after:3,time:"地铁约 12 分",from:"乌丸御池",to:"JR 京都站新干线中央口",fromAddress:"京都市営地下鉄 烏丸御池駅, 〒604-8171 京都府京都市中京区虎屋町",toAddress:"JR京都駅 新幹線中央口, 〒600-8214 京都府京都市下京区東塩小路高倉町8-3",line:"京都市营地铁乌丸线",detail:"乌丸御池 → 京都；13:40 前后抵达并休整",fare:"地铁一日券覆盖",alt:"出租车约 15 分",altFare:"约 ¥1,500"},
     {after:4,time:"34 分",from:"JR 京都站新干线中央口",to:"JR 名古屋站新干线口",fromAddress:"JR京都駅 新幹線中央口, 〒600-8214 京都府京都市下京区東塩小路高倉町8-3",toAddress:"JR名古屋駅 新幹線口, 〒450-0002 愛知県名古屋市中村区名駅1丁目1-4",line:"东海道新干线 NOZOMI 428",detail:"15:14 → 15:48 · smart EX 已预订",fare:"¥5,710",alt:"后续 NOZOMI / HIKARI 指定席",altFare:"按改签时显示价格",note:"普通车 · 成人 1 名；车次与座席将在 8/30 05:30 后最终确认。"},
     {after:5,time:"39 分",from:"JR 名古屋站关西本线月台",to:"JR 富田浜站",fromAddress:"JR名古屋駅, 〒450-0002 愛知県名古屋市中村区名駅1丁目1-4",toAddress:"JR富田浜駅, 〒510-8008 三重県四日市市富田浜町",line:"JR 关西本线",detail:"16:22 → 17:01",fare:"¥680",alt:"近铁名古屋 → 近铁富田 + 步行",altFare:"约 ¥760"},
     {after:6,time:"步行 34 分",from:"JR 富田浜站",to:"四日市巨蛋北侧入口",fromAddress:"JR富田浜駅, 〒510-8008 三重県四日市市富田浜町",toAddress:"四日市ドーム, 〒510-0012 三重県四日市市大字羽津甲5169",line:"官方步行路线",detail:"沿霞浦绿地水道东侧",fare:"¥0",alt:"矶津南侧免费区",altFare:"交通另计"},
@@ -105,7 +106,7 @@ const alternatives:Alternative[][]=[
   ],
   [
     {trigger:"花火官方取消",title:"京都铁路博物馆后直接回堺",detail:"博物馆 10:00—17:00；放弃名古屋与四日市长途段，傍晚从京都返程。",place:"Kyoto Railway Museum",tag:"取消"},
-    {trigger:"京都高温",title:"取消京都御苑，京都站提前休整",detail:"二条城与漫画博物馆结束后直接去京都站，补水、吃午餐并做天气二次检查。",place:"Kyoto Station",tag:"省力"},
+    {trigger:"京都高温或降雨",title:"御苑缩至 20 分钟，漫画馆后直接进站",detail:"只在堺町御门附近短暂停留；漫画博物馆结束后到京都站地下街午餐、补水并休整。",place:"Kyoto Station",tag:"省力"},
     {trigger:"铁路异常或身体不适",title:"京都站终止跨区行程",detail:"不前往名古屋、富田浜与花火会场，改走最稳妥的京都—大阪—堺返程。",place:"Kyoto Station",tag:"取消"},
   ],
   [
@@ -138,15 +139,14 @@ const checklist=[
   ["gear","证件、双卡、eSIM、充电宝、雨具与补水","1 DAY"],
 ] as const;
 const sources=[
-  ["维米尔展票务","https://vermeer2026.exhibit.jp/tickets/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["二条城票价","https://nijo-jocastle.city.kyoto.lg.jp/admission/fee/?lang=en"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
+  ["维米尔展票务","https://vermeer2026.exhibit.jp/tickets/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["京都御苑","https://fng.or.jp/kyoto/"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
 ];
 const bookings=[
   {day:"8.28",level:"已预订",title:"酒店 1F 晚餐",time:"19:00",detail:"预约已确认；人数、金额、菜单和预约编号仅保留在本人 Gmail 邮件中。",price:"详情不公开",links:[["查看预约邮件（需登录本人 Gmail）","https://mail.google.com/mail/#all/1a022be191cb3766"],["餐厅官方页面","https://www.agoraregency-sakai.com/restaurants/loop/"]]},
   {day:"8.29",level:"已申请",title:"维米尔追加抽选",time:"首选 10:00 · 备选 11:00 / 12:00 / 13:00",detail:"追加抽选已提交；8/27 约 15:00 公布结果。中签后保存电子票与入场时段；现场不售当日票。",price:"一般 ¥3,000 / 学生 ¥1,500",links:[["票务与结果说明","https://vermeer2026.exhibit.jp/tickets/"],["展览规则","https://vermeer2026.exhibit.jp/overview/"]]},
   {day:"8.30",level:"已预订",title:"京都 → 名古屋 新干线",time:"NOZOMI 428 · 15:14—15:48",detail:"smart EX · 普通车 · 成人 1 名。邮件注明车次与座席将在 8/30 05:30 后最终确认，请当天早晨复核。",price:"已付 ¥5,710",links:[["SmartEX 管理预订","https://shinkansen2.jr-central.co.jp/RSV_P/S_smart_en_index.htm"],["乘车指南","https://smart-ex.jp/en/"]]},
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},
-  {day:"8.30",level:"建议",title:"二条城 + 二之丸御殿",time:"08:45 入场",detail:"二之丸无需预约，但提前买 Web Ticket 可减少现场排队；本丸御殿则必须预约，本计划不进入本丸。",price:"¥1,300",links:[["官方票务说明 / 购票","https://nijo-jocastle.city.kyoto.lg.jp/admission/ticket/?lang=en"]]},
-  {day:"8.30",level:"建议",title:"京都国际漫画博物馆",time:"10:20 入场",detail:"普通参观可现场购票；官网提供个人电子票，适合提前保存。",price:"¥1,200",links:[["个人电子票","https://www.e-tix.jp/kyotomm/en/"],["开放时间与票价","https://kyotomm.jp/en/opentime-cost/"]]},
+  {day:"8.30",level:"现场",title:"京都国际漫画博物馆",time:"10:20 入场",detail:"不要提前买电子票；到接待处出示当天有效的京都地铁一日券，成人票享八折。普通参观通常不会售罄。",price:"优惠后 ¥960",links:[["开放时间、票价与地铁券优惠","https://kyotomm.jp/en/opentime-cost/"]]},
   {day:"8.31",level:"建议",title:"神户牛晚餐",time:"17:45—20:00",detail:"尚未指定餐厅；先从神户牛官方认证餐厅筛选，再进入各店预约页锁定 18:30 左右。",price:"按餐厅套餐",links:[["神户牛官方餐厅指南","https://kobebeef-org.jp/"],["Google Maps 餐厅列表","https://www.google.com/maps/search/?api=1&query=Kobe+beef+official+restaurant+Harborland"]]},
   {day:"8.29",level:"可选",title:"梅田蓝天大厦",time:"16:30 后视体力",detail:"不是行程硬点；决定登顶后再购票即可。大阪周游卡仅在规定时段免费，购买前核对当日规则。",price:"以官网当日票价为准",links:[["官方购票与营业信息","https://www.skybldg.co.jp/en/observatory/"]]},
   {day:"8.28",level:"可选",title:"Rapi:t β 舒适升级",time:"关西机场 → 堺",detail:"仅选 β；α 不停堺。若使用机场急行则无需预订。",price:"普通席约 ¥1,410",links:[["南海 Rapi:t 官方","https://www.howto-osaka.com/en/rapit/"],["HopeGoo 购票","https://www.hopegoo.com/zh-hk/shelves/?spu=SPU1871913195475755008"]]},
@@ -192,7 +192,7 @@ export default function Home(){
     <section className="overview" id="overview"><div><p className="eyebrow">TRIP AT A GLANCE</p><h2>一眼掌握<br/>整个旅程</h2></div><div className="metric"><strong>¥19,130</strong><span>预计交通</span></div><div className="metric"><strong>¥{(43930+(student?0:1500)+shopping).toLocaleString()}</strong><span>当前总预算*</span></div><div className="metric"><strong>5</strong><span>旅行日</span></div><p className="overview-note">* 不含机票与酒店，已计入下方自定义购物预算。</p></section>
     <section className="planning" id="budget">
       <div className="planning-head"><p className="eyebrow dark">MONEY & MOBILITY</p><h2>钱花在哪里，<br/>一目了然。</h2></div>
-      <div className="budget-card"><div className="budget-total"><small>预计总额</small><strong>¥{(43930+(student?0:1500)+shopping).toLocaleString()}</strong><span>不含机酒</span></div><div className="bars"><div><span>餐饮 ¥21,500</span><i style={{width:"47%"}}/></div><div><span>交通 ¥19,130</span><i style={{width:"42%"}}/></div><div><span>门票 ¥{student?"4,800":"6,300"}</span><i style={{width:"14%"}}/></div></div><label className="toggle"><input type="checkbox" checked={student} onChange={e=>setStudent(e.target.checked)}/><span/> 使用维米尔学生票（需有效学生证）</label><label className="shop-input">购物预留 <span>¥</span><input type="number" min="0" step="1000" value={shopping} onChange={e=>setShopping(Math.max(0,Number(e.target.value)))}/></label></div>
+      <div className="budget-card"><div className="budget-total"><small>预计总额</small><strong>¥{(42630+(student?0:1500)+shopping).toLocaleString()}</strong><span>不含机酒</span></div><div className="bars"><div><span>餐饮 ¥21,500</span><i style={{width:"49%"}}/></div><div><span>交通 ¥19,130</span><i style={{width:"44%"}}/></div><div><span>门票 ¥{student?"3,500":"5,000"}</span><i style={{width:"11%"}}/></div></div><label className="toggle"><input type="checkbox" checked={student} onChange={e=>setStudent(e.target.checked)}/><span/> 使用维米尔学生票（需有效学生证）</label><label className="shop-input">购物预留 <span>¥</span><input type="number" min="0" step="1000" value={shopping} onChange={e=>setShopping(Math.max(0,Number(e.target.value)))}/></label></div>
       <div className="passes-head"><div><small>PASS SELECTOR</small><h3>通票与周游券判断</h3></div><p>价格按 2026 年官方信息整理；特急指定席通常需要另付费用。</p></div>
       <div className="pass-grid">
         <article className="chosen"><span className="pass-status">推荐 · 8/29</span><b>Enjoy Eco Card</b><strong>¥620 <small>官方周末价</small></strong><p>覆盖大阪 Metro 与 Osaka City Bus；南海堺—难波仍另付往返 ¥580。</p><div className="seller-prices"><a href="https://www.hopegoo.com/zh-hk/shelves?spu=SPU1957362140442828800" target="_blank" rel="noreferrer"><span>HopeGoo 同类 QR 票</span><b>HK$63 起</b></a><a href="https://www.klook.com/zh-HK/activity/11515-osaka-metro-pass/" target="_blank" rel="noreferrer"><span>Klook 地铁＋巴士 1日</span><b>HK$50</b></a></div><a href="https://subway.osakametro.co.jp/guide/page/enjoy-eco.php" target="_blank" rel="noreferrer">官方说明 ↗</a></article>

@@ -144,7 +144,7 @@ const sources=[
   ["维米尔展票务","https://vermeer2026.exhibit.jp/tickets/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["京都御苑","https://fng.or.jp/kyoto/"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
 ];
 const bookings=[
-  {day:"8.28",level:"已预订",title:"酒店 1F 晚餐",time:"19:00",detail:"预约已确认；人数、金额、菜单和预约编号仅保留在本人 Gmail 邮件中。",price:"详情不公开",links:[["查看预约邮件（需登录本人 Gmail）","https://mail.google.com/mail/#all/1a022be191cb3766"],["餐厅官方页面","https://www.agoraregency-sakai.com/restaurants/loop/"]]},
+  {day:"8.28",level:"已预订",title:"酒店 1F 晚餐",time:"19:00",detail:"预约已确认；人数、金额、菜单和预约编号不在公开网站展示。",price:"详情不公开",links:[["餐厅官方页面","https://www.agoraregency-sakai.com/restaurants/loop/"]]},
   {day:"8.29",level:"已申请",title:"维米尔追加抽选",time:"首选 10:00 · 备选 11:00 / 12:00 / 13:00",detail:"追加抽选已提交；8/27 约 15:00 公布结果。中签后保存电子票与入场时段；现场不售当日票。",price:"一般 ¥3,000 / 学生 ¥1,500",links:[["票务与结果说明","https://vermeer2026.exhibit.jp/tickets/"],["展览规则","https://vermeer2026.exhibit.jp/overview/"]]},
   {day:"8.30",level:"已预订",title:"京都 → 名古屋 新干线",time:"NOZOMI 428 · 15:14—15:48",detail:"smart EX · 普通车 · 成人 1 名。邮件注明车次与座席将在 8/30 05:30 后最终确认，请当天早晨复核。",price:"已付 ¥5,710",links:[["SmartEX 管理预订","https://shinkansen2.jr-central.co.jp/RSV_P/S_smart_en_index.htm"],["乘车指南","https://smart-ex.jp/en/"]]},
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},

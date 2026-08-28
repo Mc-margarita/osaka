@@ -16,11 +16,11 @@ const days: Day[] = [
     {time:"18:00",title:"堺旧港与旧灯塔",meta:"港湾短线 · 最晚 18:30 返程",note:"仅走旧堺灯塔短线；18:30 必须返回，预留时间回酒店参加 19:00 晚餐。",place:"Old Sakai Lighthouse",kind:"nature"},
     {time:"19:00",title:"酒店 1F 晚餐",meta:"已预订 · 预约详情见本人 Gmail",note:"按预约时间到达酒店 1 楼餐厅；公开行程不显示人数、金额、菜单或预约编号。",place:"All Day Dining & Lounge the LOOP Hotel Agora Regency Osaka Sakai",kind:"food"},
   ]},
-  { date:"8.29",dow:"周六",city:"大阪",theme:"维米尔 · 动漫 · 梅田",accent:"ART DAY",cost:"交通 ¥1,200",map:"Nakanoshima Museum of Art Osaka",stops:[
+  { date:"8.29",dow:"周六",city:"大阪",theme:"梵高 · 动漫 · 梅田",accent:"ART DAY",cost:"交通 ¥1,200",map:"Abeno Harukas Art Museum Osaka",stops:[
     {time:"07:45",title:"从堺出发",meta:"南海 + 周末 Enjoy Eco Card",note:"Eco Card ¥620，当日地铁巴士畅行。",place:"Sakai Station Osaka",kind:"move"},
-    {time:"08:40",title:"中之岛建筑散步",meta:"河岸 · 45 分钟",place:"Nakanoshima Osaka",kind:"nature"},
-    {time:"10:00*",title:"维米尔《戴珍珠耳环的少女》",meta:"追加抽选已申请 · 首选 10:00 · 约 2 小时",note:"8/27 约 15:00 公布结果；备选 11:00、12:00、13:00，最终入场时间以中签通知为准。现场不售当日票。",place:"Nakanoshima Museum of Art Osaka",kind:"culture"},
-    {time:"11:30",title:"中之岛午餐",meta:"避开正午暴晒",place:"Nakanoshima Osaka restaurants",kind:"food"},
+    {time:"08:35",title:"天王寺公园与 HARUKAS 外观",meta:"树荫短线 · 约 70 分钟",note:"从天王寺站步行至美术馆；炎热时可直接进入 HARUKAS 商场休息。",place:"Tennoji Park Osaka",kind:"nature"},
+    {time:"10:00",title:"梵高《吊桥》与印象派画家们",meta:"阿倍野 HARUKAS 美术馆 · 约 2 小时",note:"展出梵高《吊桥》以及马奈、莫奈、雷诺阿、塞尚等 42 位画家的 70 件作品；非抽选、非分时段制。",place:"Abeno Harukas Art Museum Osaka",kind:"culture"},
+    {time:"12:15",title:"天王寺午餐",meta:"HARUKAS / Q's Mall 室内休整",place:"Abeno Harukas Osaka restaurants",kind:"food"},
     {time:"13:00",title:"日本桥电电城 + 黑门",meta:"Animate / Mandarake / 骏河屋",place:"Nipponbashi Denden Town",kind:"shopping"},
     {time:"16:30",title:"梅田城市漫游",meta:"Grand Front / LUCUA / 阪急",note:"体力有余再上梅田蓝天大厦。",place:"Umeda Osaka",kind:"shopping"},
   ]},
@@ -66,8 +66,8 @@ const routes:Route[][]=[
     {after:3,time:"步行约 20 分",from:"旧堺灯塔",to:"酒店 1F the LOOP",fromAddress:"旧堺燈台, 〒590-0974 大阪府堺市堺区大浜北町5丁1",toAddress:"All Day Dining & Lounge the LOOP, ホテル アゴーラ リージェンシー 大阪堺 1F, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"步行",detail:"经大浜公园返回；18:30 前离开灯塔",fare:"¥0",alt:"出租车 · 约 5 分",altFare:"约 ¥800",note:"19:00 已预约，迟到超过 20 分钟可能被取消。"},
   ],
   [
-    {after:0,time:"约 50 分",from:"南海堺站西口",to:"大阪中之岛美术馆正门",fromAddress:"南海 堺駅 西口, 〒590-0985 大阪府堺市堺区戎島町3丁22-1",toAddress:"大阪中之島美術館, 〒530-0005 大阪府大阪市北区中之島4丁目3-1",line:"南海本线 → Osaka Metro",detail:"难波换乘御堂筋线至淀屋桥，再步行至馆",fare:"南海 ¥290 + 通票覆盖",alt:"全程按次付费",altFare:"约 ¥530"},
-    {after:3,time:"约 20 分",from:"大阪中之岛美术馆",to:"Animate 大阪日本桥店",fromAddress:"大阪中之島美術館, 〒530-0005 大阪府大阪市北区中之島4丁目3-1",toAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",line:"步行 → Osaka Metro",detail:"肥后桥 / 淀屋桥方向进站，至难波或日本桥",fare:"通票覆盖",alt:"按次购买地铁票",altFare:"约 ¥240"},
+    {after:0,time:"约 40 分",from:"南海堺站西口",to:"阿倍野 HARUKAS 美术馆",fromAddress:"南海 堺駅 西口, 〒590-0985 大阪府堺市堺区戎島町3丁22-1",toAddress:"あべのハルカス美術館, 〒545-6016 大阪府大阪市阿倍野区阿倍野筋1丁目1-43 16F",line:"南海本线 → Osaka Metro 御堂筋线",detail:"难波换乘至天王寺；16F 美术馆",fare:"南海 ¥290 + 通票覆盖",alt:"全程按次付费",altFare:"约 ¥530"},
+    {after:3,time:"约 20 分",from:"阿倍野 HARUKAS",to:"Animate 大阪日本桥店",fromAddress:"あべのハルカス, 〒545-0052 大阪府大阪市阿倍野区阿倍野筋1丁目1-43",toAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",line:"Osaka Metro 御堂筋线 → 步行",detail:"天王寺 → 难波，再步行进入电电城",fare:"通票覆盖",alt:"出租车",altFare:"约 ¥1,300"},
     {after:4,time:"约 15 分",from:"Animate 大阪日本桥店",to:"Grand Front Osaka 南馆",fromAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",toAddress:"グランフロント大阪 南館, 〒530-0011 大阪府大阪市北区大深町4-20",line:"步行 → Osaka Metro 御堂筋线",detail:"难波 → 梅田",fare:"通票覆盖",alt:"按次购买地铁票",altFare:"约 ¥240"},
     {after:5,time:"约 40 分",from:"Grand Front Osaka 南馆",to:"Hotel Agora Regency 正门",fromAddress:"グランフロント大阪 南館, 〒530-0011 大阪府大阪市北区大深町4-20",toAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"Metro → 南海本线",detail:"梅田 → 难波换乘，堺站西口出站",fare:"通票覆盖 + 南海 ¥290",alt:"JR 大阪环状线 → 新今宫 → 南海",altFare:"约 ¥510"},
   ],
@@ -102,9 +102,9 @@ const alternatives:Alternative[][]=[
     {trigger:"状态很好",title:"大浜公园短线替代完整港湾线",detail:"只走公园与旧灯塔往返，不继续向远处延伸，控制在 45 分钟内。",place:"Ohama Park Sakai",tag:"省力"},
   ],
   [
-    {trigger:"维米尔未中签",title:"大阪市立科学馆 + 中之岛室内线",detail:"科学馆 8/29 开馆，9:30—17:00；可替换美术馆时段，仍保持中之岛动线。",place:"Osaka Science Museum",tag:"室内"},
+    {trigger:"展馆排队过长或临时不适",title:"缩短美术馆，提前转日本桥",detail:"保留梵高《吊桥》与印象派核心展厅后离馆；午餐与二次元街提前开始。",place:"Abeno Harukas Art Museum Osaka",tag:"室内"},
     {trigger:"高温或暴雨",title:"日本桥缩短，提前进入梅田商场",detail:"Animate / Mandarake 选一至两家，随后转 Grand Front、LUCUA、阪急室内活动。",place:"Grand Front Osaka",tag:"雨天"},
-    {trigger:"脚力不足",title:"中之岛后直达梅田",detail:"跳过日本桥，把下午集中给午餐、购物与咖啡；减少一次跨城移动。",place:"Umeda Osaka",tag:"省力"},
+    {trigger:"脚力不足",title:"天王寺后直达梅田",detail:"跳过日本桥，把下午集中给午餐、购物与咖啡；减少一次跨城移动。",place:"Umeda Osaka",tag:"省力"},
   ],
   [
     {trigger:"花火官方取消",title:"京都铁路博物馆后直接回堺",detail:"博物馆 10:00—17:00；放弃名古屋与四日市长途段，傍晚从京都返程。",place:"Kyoto Railway Museum",tag:"取消"},
@@ -130,8 +130,8 @@ const facilityLabels:Record<Facility,{label:string;query:string;icon:string}>={
   none:{label:"地点 / 路线",query:"",icon:"⌖"},smoking:{label:"吸烟所",query:"喫煙所",icon:"🚬"},convenience:{label:"便利店",query:"コンビニ",icon:"▣"},toilet:{label:"公共卫生间",query:"公衆トイレ",icon:"WC"},postoffice:{label:"邮局",query:"郵便局",icon:"〒"},bookstore:{label:"书店",query:"書店",icon:"本"},souvenir:{label:"明信片 / 周边",query:"ポストカード お土産 グッズ",icon:"✦"},
 };
 const checklist=[
-  ["vermeer","维米尔追加抽选已提交","已完成"],
-  ["result","8/27 约 15:00 查抽选结果并保存 QR","P0"],
+  ["vermeer","维米尔追加抽选未中签","已完成"],
+  ["gogh","购买梵高与印象派展电子票或现场购票","P0"],
   ["loop-dinner","8/28 19:00 到酒店 1F 用餐","已预订"],
   ["trains","新干线已订；继续预订 8/30 近铁特急 21:59","P0"],
   ["flight","补齐往返航班、航站楼与值机信息","P0"],
@@ -141,11 +141,11 @@ const checklist=[
   ["gear","证件、双卡、eSIM、充电宝、雨具与补水","1 DAY"],
 ] as const;
 const sources=[
-  ["维米尔展票务","https://vermeer2026.exhibit.jp/tickets/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["京都御苑","https://fng.or.jp/kyoto/"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
+  ["梵高与印象派展票务","https://www.aham.jp/exhibition/future/wallraf/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["京都御苑","https://fng.or.jp/kyoto/"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
 ];
 const bookings=[
   {day:"8.28",level:"已预订",title:"酒店 1F 晚餐",time:"19:00",detail:"预约已确认；人数、金额、菜单和预约编号不在公开网站展示。",price:"详情不公开",links:[["餐厅官方页面","https://www.agoraregency-sakai.com/restaurants/loop/"]]},
-  {day:"8.29",level:"已申请",title:"维米尔追加抽选",time:"首选 10:00 · 备选 11:00 / 12:00 / 13:00",detail:"追加抽选已提交；8/27 约 15:00 公布结果。中签后保存电子票与入场时段；现场不售当日票。",price:"一般 ¥3,000 / 学生 ¥1,500",links:[["票务与结果说明","https://vermeer2026.exhibit.jp/tickets/"],["展览规则","https://vermeer2026.exhibit.jp/overview/"]]},
+  {day:"8.29",level:"待购买",title:"梵高《吊桥》与印象派画家们",time:"10:00 入场 · 阿倍野 HARUKAS 美术馆 16F",detail:"维米尔追加抽选未中签，已替换。非抽选、非分时段制；周六建议购买电子票以减少现场排队。学生票须出示有效学生证件。",price:"一般 ¥2,100 / 大高生 ¥1,700",links:[["官方展览与购票入口","https://www.aham.jp/exhibition/future/wallraf/"]]},
   {day:"8.30",level:"已预订",title:"京都 → 名古屋 新干线",time:"NOZOMI 428 · 15:14—15:48",detail:"smart EX · 普通车 · 成人 1 名。邮件注明车次与座席将在 8/30 05:30 后最终确认，请当天早晨复核。",price:"已付 ¥5,710",links:[["SmartEX 管理预订","https://shinkansen2.jr-central.co.jp/RSV_P/S_smart_en_index.htm"],["乘车指南","https://smart-ex.jp/en/"]]},
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},
   {day:"8.30",level:"现场",title:"京都国际漫画博物馆",time:"10:20 入场",detail:"不要提前买电子票；到接待处出示当天有效的京都地铁一日券，成人票享八折。普通参观通常不会售罄。",price:"优惠后 ¥960",links:[["开放时间、票价与地铁券优惠","https://kyotomm.jp/en/opentime-cost/"]]},
@@ -191,22 +191,22 @@ export default function Home(){
       </div>
     </section>
     <section className="booking" id="booking"><div className="booking-head"><div><p className="eyebrow">BOOKING DESK / 预订中心</p><h2>该订的，<br/>都在这里。</h2></div><p>按优先级集中所有购票与预约入口。点击按钮会打开对应的官方或指定平台页面；航班承运人尚未补齐，因此暂不能提供值机入口。</p></div><div className="booking-grid">{bookings.map((item,i)=><article key={item.title} className={`booking-card level-${item.level}`}><div className="booking-no">{String(i+1).padStart(2,"0")}</div><div className="booking-copy"><div className="booking-tags"><span>{item.level}</span><small>{item.day}</small></div><h3>{item.title}</h3><b>{item.time}</b><p>{item.detail}</p><strong>{item.price}</strong><div className="booking-links">{item.links.map(([label,url])=><a key={url} href={url} target="_blank" rel="noreferrer">{label} ↗</a>)}</div></div></article>)}</div></section>
-    <section className="overview" id="overview"><div><p className="eyebrow">TRIP AT A GLANCE</p><h2>一眼掌握<br/>整个旅程</h2></div><div className="metric"><strong>¥19,130</strong><span>预计交通</span></div><div className="metric"><strong>¥{(43930+(student?0:1500)+shopping).toLocaleString()}</strong><span>当前总预算*</span></div><div className="metric"><strong>5</strong><span>旅行日</span></div><p className="overview-note">* 不含机票与酒店，已计入下方自定义购物预算。</p></section>
+    <section className="overview" id="overview"><div><p className="eyebrow">TRIP AT A GLANCE</p><h2>一眼掌握<br/>整个旅程</h2></div><div className="metric"><strong>¥19,130</strong><span>预计交通</span></div><div className="metric"><strong>¥{(44130+(student?0:400)+shopping).toLocaleString()}</strong><span>当前总预算*</span></div><div className="metric"><strong>5</strong><span>旅行日</span></div><p className="overview-note">* 不含机票与酒店，已计入下方自定义购物预算。</p></section>
     <section className="planning" id="budget">
       <div className="planning-head"><p className="eyebrow dark">MONEY & MOBILITY</p><h2>钱花在哪里，<br/>一目了然。</h2></div>
-      <div className="budget-card"><div className="budget-total"><small>预计总额</small><strong>¥{(42630+(student?0:1500)+shopping).toLocaleString()}</strong><span>不含机酒</span></div><div className="bars"><div><span>餐饮 ¥21,500</span><i style={{width:"49%"}}/></div><div><span>交通 ¥19,130</span><i style={{width:"44%"}}/></div><div><span>门票 ¥{student?"3,500":"5,000"}</span><i style={{width:"11%"}}/></div></div><label className="toggle"><input type="checkbox" checked={student} onChange={e=>setStudent(e.target.checked)}/><span/> 使用维米尔学生票（需有效学生证）</label><label className="shop-input">购物预留 <span>¥</span><input type="number" min="0" step="1000" value={shopping} onChange={e=>setShopping(Math.max(0,Number(e.target.value)))}/></label></div>
+      <div className="budget-card"><div className="budget-total"><small>预计总额</small><strong>¥{(42830+(student?0:400)+shopping).toLocaleString()}</strong><span>不含机酒</span></div><div className="bars"><div><span>餐饮 ¥21,500</span><i style={{width:"49%"}}/></div><div><span>交通 ¥19,130</span><i style={{width:"44%"}}/></div><div><span>门票 ¥{student?"3,700":"4,100"}</span><i style={{width:"11%"}}/></div></div><label className="toggle"><input type="checkbox" checked={student} onChange={e=>setStudent(e.target.checked)}/><span/> 使用梵高展学生票（需有效学生证）</label><label className="shop-input">购物预留 <span>¥</span><input type="number" min="0" step="1000" value={shopping} onChange={e=>setShopping(Math.max(0,Number(e.target.value)))}/></label></div>
       <div className="passes-head"><div><small>PASS SELECTOR</small><h3>通票与周游券判断</h3></div><p>价格按 2026 年官方信息整理；特急指定席通常需要另付费用。</p></div>
       <div className="pass-grid">
         <article className="chosen"><span className="pass-status">推荐 · 8/29</span><b>Enjoy Eco Card</b><strong>¥620 <small>官方周末价</small></strong><p>覆盖大阪 Metro 与 Osaka City Bus；南海堺—难波仍另付往返 ¥580。</p><div className="seller-prices"><a href="https://www.hopegoo.com/zh-hk/shelves?spu=SPU1957362140442828800" target="_blank" rel="noreferrer"><span>HopeGoo 同类 QR 票</span><b>HK$63 起</b></a><a href="https://www.klook.com/zh-HK/activity/11515-osaka-metro-pass/" target="_blank" rel="noreferrer"><span>Klook 地铁＋巴士 1日</span><b>HK$50</b></a></div><a href="https://subway.osakametro.co.jp/guide/page/enjoy-eco.php" target="_blank" rel="noreferrer">官方说明 ↗</a></article>
         <article><span className="pass-status conditional">基础工具</span><b>ICOCA</b><strong>¥2,000 <small>含 ¥500 押金</small></strong><p>不提供折扣，但最适合本行程的多运营商零散车费；初始可用余额 ¥1,500。</p><a href="https://www.westjr.co.jp/global/en/howto/icoca/" target="_blank" rel="noreferrer">官方说明 ↗</a></article>
-        <article><span className="pass-status no">不推荐</span><b>Osaka Amazing Pass</b><strong>¥3,500 <small>1 日 / 2 日 ¥5,000</small></strong><p>维米尔特别展不包含，8/29 付费景点少；相比 Eco Card 回本困难。</p><div className="seller-prices"><span><span>HopeGoo</span><b>未检索到同款</b></span><a href="https://www.klook.com/zh-CN/activity/82312-amazing-pass-osaka/" target="_blank" rel="noreferrer"><span>Klook 1日 / 2日</span><b>¥148 / ¥212</b></a></div><a href="https://osaka-amazing-pass.com/en/info.html" target="_blank" rel="noreferrer">官方价格 ↗</a></article>
+        <article><span className="pass-status no">不推荐</span><b>Osaka Amazing Pass</b><strong>¥3,500 <small>1 日 / 2 日 ¥5,000</small></strong><p>梵高与印象派特展不包含，8/29 付费景点少；相比 Eco Card 回本困难。</p><div className="seller-prices"><span><span>HopeGoo</span><b>未检索到同款</b></span><a href="https://www.klook.com/zh-CN/activity/82312-amazing-pass-osaka/" target="_blank" rel="noreferrer"><span>Klook 1日 / 2日</span><b>¥148 / ¥212</b></a></div><a href="https://osaka-amazing-pass.com/en/info.html" target="_blank" rel="noreferrer">官方价格 ↗</a></article>
         <article><span className="pass-status conditional">条件适用</span><b>Kintetsu Rail Pass</b><strong>¥1,900 <small>1 日 / 2 日 ¥3,700</small></strong><p>通票不覆盖阪神神户段，也不含近铁特急券；需按实际覆盖段比价。</p><div className="seller-prices"><a href="https://www.hopegoo.com/zh-hk/shelves?spu=SPU1961265960069185536" target="_blank" rel="noreferrer"><span>HopeGoo 1日起</span><b>HK$92.27</b></a><a href="https://www.klook.com/zh-HK/activity/5540-kintetsu-rail-pass-osaka/" target="_blank" rel="noreferrer"><span>Klook 1日 / 2日</span><b>HK$92 / HK$178</b></a></div><a href="https://www.kintetsu.co.jp/foreign/english/ticket/index.html" target="_blank" rel="noreferrer">官方范围 ↗</a></article>
         <article><span className="pass-status no">不推荐</span><b>Kintetsu 5day</b><strong>¥4,900 <small>Plus ¥6,700</small></strong><p>京都—名古屋采用新干线，花火返程仍需另买特急券，节省有限且约束路线。</p><div className="seller-prices"><a href="https://www.hopegoo.com/zh-hk/shelves?spu=SPU1961265960069185536" target="_blank" rel="noreferrer"><span>HopeGoo</span><b>商品页实时选规格</b></a><a href="https://www.klook.com/zh-HK/activity/5540-kintetsu-rail-pass-osaka/" target="_blank" rel="noreferrer"><span>Klook 5日 / Plus</span><b>HK$236 / HK$323</b></a></div><a href="https://www.kintetsu.co.jp/foreign/english/ticket/index.html" target="_blank" rel="noreferrer">官方范围 ↗</a></article>
         <article><span className="pass-status conditional">舒适升级</span><b>Rapi:t β</b><strong>约 ¥1,410 <small>普通席</small></strong><p>抵达日仅为舒适度升级；机场急行约 ¥760 已可直达堺。注意 α 不停堺。</p><a href="https://www.howto-osaka.com/en/rapit/" target="_blank" rel="noreferrer">列车说明 ↗</a></article>
       </div>
       <p className="price-note">平台价核对于 2026-08-13。HopeGoo 与 Klook 会随币种、库存、优惠码和结算地区浮动；“起”表示页面最低可售规格。大阪 Metro 第三方游客票与现场 Enjoy Eco Card 的有效期、使用方式并不完全相同，请勿只按价格判断。</p>
     </section>
-    <section className="prep" id="prep"><div className="prep-copy"><p className="eyebrow">READY / 准备清单</p><h2>出发之前，<br/>逐项点亮。</h2><p>勾选状态会保存在当前设备。最重要的是维米尔抽选、两段指定席和航班信息。</p><div className="progress"><i style={{width:`${checked.length/checklist.length*100}%`}}/><span>{checked.length} / {checklist.length} 已完成</span></div></div><div className="checklist">{checklist.map(([id,title,tag])=><label key={id} className={checked.includes(id)?"done":""}><input type="checkbox" checked={checked.includes(id)} onChange={()=>setChecked(c=>c.includes(id)?c.filter(x=>x!==id):[...c,id])}/><i>✓</i><span><b>{title}</b><small>{tag}</small></span></label>)}</div></section>
+    <section className="prep" id="prep"><div className="prep-copy"><p className="eyebrow">READY / 准备清单</p><h2>出发之前，<br/>逐项点亮。</h2><p>勾选状态会保存在当前设备。最重要的是梵高展门票、两段指定席和航班信息。</p><div className="progress"><i style={{width:`${checked.length/checklist.length*100}%`}}/><span>{checked.length} / {checklist.length} 已完成</span></div></div><div className="checklist">{checklist.map(([id,title,tag])=><label key={id} className={checked.includes(id)?"done":""}><input type="checkbox" checked={checked.includes(id)} onChange={()=>setChecked(c=>c.includes(id)?c.filter(x=>x!==id):[...c,id])}/><i>✓</i><span><b>{title}</b><small>{tag}</small></span></label>)}</div></section>
     <section className="resources"><div><p className="eyebrow dark">OFFICIAL LINKS</p><h2>出发前，只看官方。</h2></div><div className="resource-list">{sources.map(([title,url],i)=><a key={url} href={url} target="_blank" rel="noreferrer"><small>0{i+1}</small><span>{title}</span><b>↗</b></a>)}</div></section>
     <footer><span>関西盛夏旅行手册 · 2026</span><a href="#top">回到顶部 ↑</a></footer>
     {fireMode&&<div className="fire-modal" role="dialog" aria-modal="true" aria-labelledby="fire-title"><button className="fire-close" aria-label="关闭花火撤离模式" onClick={()=>setFireMode(false)}>×</button><div className="fire-kicker">8.30 / YOKKAICHI</div><h2 id="fire-title">20:10<br/><em>必须撤离</em></h2><p>花火结束立刻沿北侧路线步行，不逛摊、不补拍、不等出租车。</p><div className="escape-line"><div><b>20:10</b><span>离开观赏区</span></div><div><b>20:35</b><span>目标富田浜</span></div><div><b>20:42</b><span>JR → 四日市</span></div><div><b>21:15</b><span>目标近铁站</span></div><div><b>21:45</b><span>必须进站</span></div><div><b>21:59</b><span>特急 → 难波</span></div></div><div className="fire-actions"><a href={mapsUrl("Yokkaichi Dome to Tomidahama Station")} target="_blank" rel="noreferrer">打开撤离地图 ↗</a><button onClick={()=>{setFireMode(false);setActiveDay(2);document.getElementById("journey")?.scrollIntoView()}}>查看当天完整行程</button></div><aside><b>立即放弃花火，如果：</b> 官方取消 · 强雷暴或大风 · 严重铁路中断 · 身体不适</aside></div>}

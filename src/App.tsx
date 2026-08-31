@@ -37,17 +37,17 @@ const days: Day[] = [
     {time:"20:10",title:"硬撤离：立刻离场",meta:"不逛摊、不补拍",note:"20:35 富田浜 → 20:42 JR 四日市 → 步行约 20 分钟 → 21:15 近铁四日市。",place:"Tomidahama Station",kind:"move"},
     {time:"21:59",title:"近铁特急 → 大阪难波",meta:"23:48 抵达 · 约 ¥3,800",note:"21:45 前必须进站；24:00 / 24:08 南海回堺，不赌 23:50。",place:"Kintetsu Yokkaichi Station",kind:"move"},
   ]},
-  { date:"8.31",dow:"周一",city:"奈良 → 神户",theme:"古寺 · 山瀑 · 港湾",accent:"TWIN CITIES",cost:"交通 ¥4,180",map:"Todai-ji Nara",stops:[
-    {time:"08:15",title:"堺 → 近铁奈良",meta:"晚起版 · ¥970",place:"Kintetsu Nara Station",kind:"move"},
-    {time:"09:45",title:"兴福寺外观",meta:"30 分钟",place:"Kofuku-ji Nara",kind:"culture"},
-    {time:"10:20",title:"东大寺大佛殿",meta:"门票 ¥800",place:"Todai-ji Nara",kind:"culture"},
-    {time:"11:30",title:"二月堂与奈良公园",meta:"林间慢行",place:"Nigatsudo Nara",kind:"nature"},
-    {time:"12:50",title:"奈良町午餐",meta:"45 分钟",place:"Naramachi Nara",kind:"food"},
-    {time:"13:45",title:"奈良 → 神户三宫",meta:"约 85 分钟 · ¥1,410",place:"Kobe Sannomiya Station",kind:"move"},
-    {time:"15:10",title:"北野异人馆外观 + 老咖啡馆",meta:"50 分钟",place:"Kitano Ijinkan Kobe",kind:"culture"},
-    {time:"16:15",title:"布引瀑布",meta:"雨天 / 雷电 / 湿滑取消",note:"布引香草园 8/31—9/3 设备检查闭园。",place:"Nunobiki Waterfall Kobe",kind:"nature"},
-    {time:"17:45",title:"美利坚公园与 Harborland",meta:"港湾夜景 · 18:25 前离开",note:"19:00 已预约神户牛晚餐；不要继续逛商场，预留约 25 分钟前往三宫。",place:"Meriken Park Kobe",kind:"nature"},
-    {time:"19:00",title:"KOBE BEEF DINING Mouriya",meta:"已预订 · 神户牛大腿牛排 140g · ¥6,950",note:"1 人，费用当天到店支付；预约邮件中的菜单标签显示“午餐”，但预约日期与到店时间明确为 8/31 19:00。迟到超过 15 分钟可能按取消处理。",place:"KOBE BEEF DINING Mouriya",kind:"food"},
+  { date:"8.31",dow:"周一",city:"神户",theme:"异人馆 · 古寺 · 港湾",accent:"KOBE SLOW DAY",cost:"交通约 ¥5,600",map:"Kobe Kitano Weathercock House",stops:[
+    {time:"10:30",title:"堺 → 神户三宫",meta:"南海 + 阪神 · 约 70 分钟 · ¥710",note:"大阪难波步行换乘阪神大阪难波；不再前往奈良。",place:"Kobe Sannomiya Station",kind:"move"},
+    {time:"11:45",title:"三宫午餐与补水",meta:"轻食 · 室内休整约 45 分钟",note:"今天气温较高，不把午餐压缩成赶路。",place:"Kobe Sannomiya Center Gai",kind:"food"},
+    {time:"12:35",title:"前往北野异人馆",meta:"出租车约 8 分钟 / 步行约 20 分钟上坡",note:"想保存体力时直接打车，预计约 ¥900—1,200。",place:"Kobe Kitano Weathercock House",kind:"move"},
+    {time:"13:00",title:"风见鸡馆 + 萌黄之馆",meta:"两馆短线 · 约 70 分钟 · 联票 ¥800",note:"只保留最有代表性的两馆，不扩展异人馆通票路线。",place:"Kobe Kitano Weathercock House",kind:"culture"},
+    {time:"14:15",title:"北野 → 能福寺",meta:"直接打车约 15—25 分钟",note:"预计 ¥2,500—3,200；堵车或含叫车费按 ¥3,500 以内准备。",place:"Nofukuji Temple Kobe",kind:"move"},
+    {time:"14:45",title:"能福寺与兵库大佛",meta:"免费参拜 · 约 40 分钟",note:"寺院范围不大，重点看兵库大佛与本堂；保持安静并留意参拜礼仪。",place:"Nofukuji Temple Kobe",kind:"culture"},
+    {time:"15:30",title:"能福寺 → Harborland",meta:"地铁海岸线 · 约 25 分钟 · 约 ¥210",note:"步行至中央市场前站，乘一站至 Harborland；累时可直接打车。",place:"Kobe Harborland umie",kind:"move"},
+    {time:"16:00",title:"Harborland + 美利坚公园",meta:"咖啡、海港与夜景 · 18:20 硬离开",note:"按体力选择室内 umie 或海边短线；19:00 已预约晚餐。",place:"BE KOBE Monument Meriken Park",kind:"nature"},
+    {time:"18:20",title:"港湾 → Mouriya",meta:"出租车约 10 分钟 · 约 ¥1,000—1,300",note:"18:50 前抵达；不要继续逛商场。",place:"KOBE BEEF DINING Mouriya",kind:"move"},
+    {time:"19:00",title:"KOBE BEEF DINING Mouriya",meta:"已预订 · 神户牛大腿牛排 140g · ¥6,950",note:"1 人，费用当天到店支付；迟到超过 15 分钟可能按取消处理。",place:"KOBE BEEF DINING Mouriya",kind:"food"},
   ]},
   { date:"9.01",dow:"周二",city:"临空城 → 关西机场",theme:"收尾购物 · 返程",accent:"DEPARTURE",cost:"交通 ¥1,010",map:"Rinku Premium Outlets",stops:[
     {time:"08:00",title:"早餐、整理行李",meta:"房内最终检查",kind:"event"},
@@ -82,11 +82,11 @@ const routes:Route[][]=[
     {after:10,time:"109 分",from:"近铁四日市站北口",to:"Hotel Agora Regency 正门",fromAddress:"近鉄四日市駅 北口, 〒510-0075 三重県四日市市安島1丁目1-56",toAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"近铁特急 → 南海本线",detail:"大阪难波 23:48 到；24:00 / 24:08 南海回堺",fare:"约 ¥4,090",alt:"若错过 21:59，立刻咨询站员末班组合",altFare:"价格随车次",note:"大阪难波换乘点：〒542-0076 大阪府大阪市中央区難波4丁目1-17；不赌 23:50 南海。"},
   ],
   [
-    {after:0,time:"约 70 分",from:"Hotel Agora Regency 正门",to:"近铁奈良站 1号出口",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"近鉄奈良駅 1番出口, 〒630-8215 奈良県奈良市東向中町29",line:"南海 → 近铁奈良线",detail:"大阪难波换乘 · 快速急行优先",fare:"¥970",alt:"南海 → JR 新今宫 → JR 奈良",altFare:"约 ¥1,050"},
-    {after:4,time:"约 85 分",from:"近铁奈良站 1号出口",to:"阪神神户三宫站东口",fromAddress:"近鉄奈良駅 1番出口, 〒630-8215 奈良県奈良市東向中町29",toAddress:"阪神 神戸三宮駅 東口, 〒651-0088 兵庫県神戸市中央区小野柄通8丁目1-8",line:"近铁奈良线 → 阪神本线",detail:"多数班次大阪难波贯通",fare:"约 ¥1,410",alt:"JR 奈良 → 大阪 → 三之宫",altFare:"约 ¥1,740"},
-    {after:6,time:"约 15 分",from:"北野异人馆街 Rhine House",to:"JR 新神户站 1F",fromAddress:"ラインの館, 〒650-0002 兵庫県神戸市中央区北野町2丁目10-24",toAddress:"JR新神戸駅, 〒650-0001 兵庫県神戸市中央区加納町1丁目3-1",line:"步行或巴士",detail:"上坡，留意体力；瀑布从新神户站后方进入",fare:"巴士 ¥210",alt:"出租车到新神户站",altFare:"约 ¥800"},
-    {after:7,time:"约 30 分",from:"JR 新神户站 1F",to:"Kobe Harborland umie Mosaic",fromAddress:"JR新神戸駅, 〒650-0001 兵庫県神戸市中央区加納町1丁目3-1",toAddress:"神戸ハーバーランドumie モザイク, 〒650-0044 兵庫県神戸市中央区東川崎町1丁目6-1",line:"地铁 → JR / 步行",detail:"三宫或元町换乘",fare:"约 ¥280",alt:"City Loop / Port Loop 巴士",altFare:"约 ¥260"},
-    {after:8,time:"约 20—25 分",from:"美利坚公园 BE KOBE 石碑",to:"KOBE BEEF DINING Mouriya",fromAddress:"BE KOBE モニュメント, 〒650-0042 兵庫県神戸市中央区波止場町2",toAddress:"KOBE BEEF DINING モーリヤ, 〒650-0012 兵庫県神戸市中央区北長狭通1丁目9-10 カクテン屋ビル2F",line:"步行 / JR 元町 → 三之宫",detail:"18:25 前离开港湾，18:50 左右到店",fare:"步行 ¥0 / JR ¥140",alt:"出租车约 10 分钟",altFare:"约 ¥1,000",note:"预约时间 19:00；迟到超过 15 分钟可能被取消。"},
+    {after:0,time:"约 70 分",from:"Hotel Agora Regency 正门",to:"阪神神户三宫站东口",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"阪神 神戸三宮駅 東口, 〒651-0088 兵庫県神戸市中央区小野柄通8丁目1-8",line:"南海本线 → 阪神本线",detail:"堺 → 南海难波；步行换乘阪神大阪难波 → 神户三宫",fare:"约 ¥710",alt:"南海 → JR 新今宫 → JR 三之宫",altFare:"约 ¥940",note:"10:30 出发；今日不前往奈良。"},
+    {after:2,time:"约 8 分",from:"神户三宫中心街",to:"风见鸡馆",fromAddress:"神戸三宮センター街, 〒650-0021 兵庫県神戸市中央区三宮町",toAddress:"神戸北野異人館 風見鶏の館, 〒650-0002 兵庫県神戸市中央区北野町3丁目13-3",line:"出租车",detail:"避开北野上坡与正午高温",fare:"约 ¥900—1,200",alt:"步行约 20—25 分钟",altFare:"¥0"},
+    {after:4,time:"约 15—25 分",from:"风见鸡馆",to:"能福寺",fromAddress:"神戸北野異人館 風見鶏の館, 〒650-0002 兵庫県神戸市中央区北野町3丁目13-3",toAddress:"能福寺, 〒652-0837 兵庫県神戸市兵庫区北逆瀬川町1-39",line:"出租车",detail:"直接跨越市中心，减少高温步行和换乘",fare:"约 ¥2,500—3,200",alt:"步行下山 → 三宫・花时计前 → 地铁海岸线中央市场前 → 步行",altFare:"地铁约 ¥240",note:"堵车或含叫车费时按 ¥3,500 以内准备。"},
+    {after:6,time:"约 25 分",from:"能福寺",to:"Kobe Harborland umie Mosaic",fromAddress:"能福寺, 〒652-0837 兵庫県神戸市兵庫区北逆瀬川町1-39",toAddress:"神戸ハーバーランドumie モザイク, 〒650-0044 兵庫県神戸市中央区東川崎町1丁目6-1",line:"步行 → 地铁海岸线",detail:"中央市场前 → Harborland 1 站；出站后步行至 Mosaic",fare:"约 ¥210",alt:"出租车约 10 分钟",altFare:"约 ¥1,200"},
+    {after:8,time:"约 10 分",from:"美利坚公园 BE KOBE 石碑",to:"KOBE BEEF DINING Mouriya",fromAddress:"BE KOBE モニュメント, 〒650-0042 兵庫県神戸市中央区波止場町2",toAddress:"KOBE BEEF DINING モーリヤ, 〒650-0012 兵庫県神戸市中央区北長狭通1丁目9-10 カクテン屋ビル2F",line:"出租车",detail:"18:20 硬离开，18:50 前到店",fare:"约 ¥1,000—1,300",alt:"步行 / JR 元町 → 三之宫",altFare:"步行 ¥0 / JR ¥140",note:"预约时间 19:00；迟到超过 15 分钟可能被取消。"},
     {after:9,time:"约 90 分",from:"KOBE BEEF DINING Mouriya",to:"Hotel Agora Regency 正门",fromAddress:"KOBE BEEF DINING モーリヤ, 〒650-0012 兵庫県神戸市中央区北長狭通1丁目9-10 カクテン屋ビル2F",toAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"步行 → 阪神 → 南海",detail:"步行至阪神神户三宫站，直通大阪难波后换乘南海至堺",fare:"约 ¥710",alt:"JR 三之宫 → 新今宫 → 南海",altFare:"约 ¥940"},
   ],
   [
@@ -112,9 +112,9 @@ const alternatives:Alternative[][]=[
     {trigger:"铁路异常或身体不适",title:"京都站终止跨区行程",detail:"不前往名古屋、富田浜与花火会场，改走最稳妥的京都—大阪—堺返程。",place:"Kyoto Station",tag:"取消"},
   ],
   [
-    {trigger:"奈良高温",title:"奈良公园缩短 + NARANICLE 休整",detail:"保留东大寺，取消二月堂长线；到三条通观光中心补水、用餐后前往神户。",place:"NARANICLE Nara",tag:"省力"},
-    {trigger:"神户下雨",title:"取消布引瀑布，改 Harborland umie",detail:"北野结束后直接去海港商场，用室内购物、咖啡与晚餐替代湿滑山路。",place:"Kobe Harborland umie",tag:"雨天"},
-    {trigger:"前一晚太晚或疲劳",title:"只选奈良或神户一城",detail:"优先保留东大寺奈良线；若想购物与夜景，则中午直接前往神户。",place:"Kintetsu Nara Station",tag:"省力"},
+    {trigger:"高温或体力不足",title:"北野只看风见鸡馆外观",detail:"取消两馆入内，把参观压缩至 30 分钟；随后直接打车去能福寺。",place:"Kobe Kitano Weathercock House",tag:"省力"},
+    {trigger:"下雨",title:"能福寺后直接进入 Harborland umie",detail:"缩短海边步行，把下午安排在商场、咖啡馆与室内观景区域。",place:"Kobe Harborland umie",tag:"雨天"},
+    {trigger:"抵达神户较晚",title:"取消能福寺，北野后直达港湾",detail:"若 14:30 仍未离开北野，优先保证港湾休息与 19:00 晚餐，不再跨城赶寺院。",place:"Kobe Harborland umie",tag:"省力"},
   ],
   [
     {trigger:"暴雨",title:"临空 SEACLE 室内线",detail:"车站直结，10:00—20:00；减少奥特莱斯露天步行，仍可用餐和补买日用品。",place:"Rinku Pleasure Town Seacle",tag:"雨天"},
@@ -152,7 +152,8 @@ const bookings=[
   {day:"8.31",level:"已预订",title:"KOBE BEEF DINING Mouriya",time:"19:00 · 1 人",detail:"TableCheck 已确认：神户牛大腿牛排套餐 140g。费用当天到店支付；邮件菜单标签显示“午餐”，但预约日期与时间明确为 8/31 19:00。高峰时段晚餐限时 1 小时 50 分。",price:"到店支付 ¥6,950",links:[["查看预约邮件（需登录本人 Gmail）","https://mail.google.com/mail/#all/1a03d9ef83fc95b5"],["餐厅官方页面","https://www.mouriya.co.jp/dsb"],["Google Maps","https://www.google.com/maps/search/?api=1&query=KOBE+BEEF+DINING+Mouriya"]]},
   {day:"8.29",level:"可选",title:"梅田蓝天大厦",time:"16:30 后视体力",detail:"不是行程硬点；决定登顶后再购票即可。大阪周游卡仅在规定时段免费，购买前核对当日规则。",price:"以官网当日票价为准",links:[["官方购票与营业信息","https://www.skybldg.co.jp/en/observatory/"]]},
   {day:"8.28",level:"可选",title:"Rapi:t β 舒适升级",time:"关西机场 → 堺",detail:"仅选 β；α 不停堺。若使用机场急行则无需预订。",price:"普通席约 ¥1,410",links:[["南海 Rapi:t 官方","https://www.howto-osaka.com/en/rapit/"],["HopeGoo 购票","https://www.hopegoo.com/zh-hk/shelves/?spu=SPU1871913195475755008"]]},
-  {day:"现场",level:"无需",title:"东大寺、奈良巴士与花火免费区",time:"按当天节奏",detail:"东大寺大佛殿与奈良巴士可现场购票；四日市北侧免费观赏区不售票，只需持续检查官方公告。",price:"东大寺 ¥800 / 巴士 ¥600",links:[["东大寺参拜信息","https://www.todaiji.or.jp/"],["奈良巴士 Pass","https://www.narakotsu.co.jp/language/en/pass.html"],["花火免费区官方说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"]]},
+  {day:"8.31",level:"现场",title:"北野异人馆与能福寺",time:"13:00 北野 · 14:45 能福寺",detail:"风见鸡馆与萌黄之馆购买两馆联票；能福寺与兵库大佛免费参拜，无需预约。",price:"两馆联票 ¥800 / 能福寺 ¥0",links:[["北野异人馆官方信息","https://www.kobe-kazamidori.com/"],["能福寺 Google Maps","https://www.google.com/maps/search/?api=1&query=Nofukuji+Temple+Kobe"]]},
+  {day:"8.30",level:"无需",title:"四日市花火免费区",time:"19:15 开始",detail:"四日市北侧免费观赏区不售票，只需持续检查官方公告。",price:"¥0",links:[["花火免费区官方说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"]]},
 ] as const;
 
 export default function Home(){
@@ -174,7 +175,7 @@ export default function Home(){
   return <main>
     <section className="hero" id="top"><div className="rail-line" aria-hidden="true"><i/><i/><i/><i/><i/></div>
       <nav className="topbar" aria-label="主导航"><a className="brand" href="#top"><span className="brand-mark">関</span><span>关西盛夏<br/><small>TRIP FILE 026</small></span></a><div className="navlinks"><a href="#journey">行程</a><a href="#map">地图</a><a href="#booking">预订</a><a href="#budget">通票</a><a href="#prep">准备</a></div><div className="status-dot"><span/> 行程已定稿</div></nav>
-      <div className="hero-grid"><div className="hero-copy"><p className="eyebrow">OSAKA · KYOTO · YOKKAICHI · NARA · KOBE</p><h1>沿着铁路线，<br/><em>穿过关西盛夏。</em></h1><p className="hero-lede">5 天 · 5 城 · 1 场海上花火。把美术馆、古城、漫画、山瀑与港湾夜色，收进一张可以随身使用的路线图。</p><div className="hero-actions"><a className="button primary" href="#journey">打开每日行程 <span>↘</span></a><button className="button ghost" onClick={()=>setFireMode(true)}>花火撤离模式 <span>20:10</span></button></div></div>
+      <div className="hero-grid"><div className="hero-copy"><p className="eyebrow">OSAKA · KYOTO · YOKKAICHI · KOBE</p><h1>沿着铁路线，<br/><em>穿过关西盛夏。</em></h1><p className="hero-lede">5 天 · 4 城 · 1 场海上花火。把美术馆、漫画、古寺与港湾夜色，收进一张可以随身使用的路线图。</p><div className="hero-actions"><a className="button primary" href="#journey">打开每日行程 <span>↘</span></a><button className="button ghost" onClick={()=>setFireMode(true)}>花火撤离模式 <span>20:10</span></button></div></div>
         <aside className="ticket" aria-label="旅行信息"><div className="ticket-head"><span>旅 行 券</span><b>KIX / 0828</b></div><div className="ticket-body"><div><small>出发</small><strong>08.28</strong><span>FRI</span></div><div className="ticket-arrow">→</div><div><small>返程</small><strong>09.01</strong><span>TUE</span></div></div><div className="ticket-foot"><div><small>BASE</small><b>SAKAI</b></div><div><small>TRAVELER</small><b>01</b></div><div><small>DAYS TO GO</small><b>{daysLeft}</b></div></div><div className="barcode" aria-hidden="true"/></aside>
       </div><div className="hero-note"><b>旅行基地</b><span>Hotel Agora Regency Osaka Sakai</span><a href={mapsUrl("Hotel Agora Regency Osaka Sakai")} target="_blank" rel="noreferrer">Google Maps ↗</a></div>
     </section>

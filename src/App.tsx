@@ -49,13 +49,19 @@ const days: Day[] = [
     {time:"18:20",title:"港湾 → Mouriya",meta:"出租车约 10 分钟 · 约 ¥1,000—1,300",note:"18:50 前抵达；不要继续逛商场。",place:"KOBE BEEF DINING Mouriya",kind:"move"},
     {time:"19:00",title:"KOBE BEEF DINING Mouriya",meta:"已预订 · 神户牛大腿牛排 140g · ¥6,950",note:"1 人，费用当天到店支付；迟到超过 15 分钟可能按取消处理。",place:"KOBE BEEF DINING Mouriya",kind:"food"},
   ]},
-  { date:"9.01",dow:"周二",city:"临空城 → 关西机场",theme:"收尾购物 · 返程",accent:"DEPARTURE",cost:"交通 ¥1,010",map:"Rinku Premium Outlets",stops:[
-    {time:"08:00",title:"早餐、整理行李",meta:"房内最终检查",kind:"event"},
-    {time:"09:30",title:"退房",meta:"最晚 10:30 · 全部行李带走",place:"Hotel Agora Regency Osaka Sakai",kind:"event"},
-    {time:"10:45",title:"堺 → 临空城",meta:"约 45 分钟 · ¥640 · 存行李",place:"Rinku Town Station",kind:"move"},
-    {time:"11:30",title:"临空奥特莱斯",meta:"护照退税 / 游客券",place:"Rinku Premium Outlets",kind:"shopping"},
-    {time:"15:20",title:"购物硬停止",meta:"15:25 上车去机场",place:"Rinku Town Station",kind:"event"},
-    {time:"15:40",title:"机场手续",meta:"值机、托运、安检；T2 需接驳",note:"仅在手续后仍余 2.5 小时以上时考虑休息室；航班约 19:30，仍待确认。",place:"Kansai International Airport",kind:"move"},
+  { date:"9.01",dow:"周二",city:"难波 · 日本桥 → 关西机场 T2",theme:"集中采购 · 返程",accent:"DEPARTURE",cost:"交通约 ¥1,260 · 寄存 ¥800",map:"Nankai Namba Station",stops:[
+    {time:"08:00",title:"早餐、整理与称重",meta:"证件、充电宝、退税品最后检查",note:"普通卷烟可在值机前放入托运行李；电子烟、IQOS / Ploom / glo 设备和充电宝必须随身。打火机不要放入托运行李。",kind:"event"},
+    {time:"09:30",title:"退房",meta:"全部行李带走 · 房间最终检查",place:"Hotel Agora Regency Osaka Sakai",kind:"event"},
+    {time:"10:15",title:"抵达难波并寄存28寸行李",meta:"n・e・s・t 难波店 · 2F中央改札口正面 · ¥800",note:"柜台在南海难波站2楼中央检票口正面、检票口外；官方限制为三边合计≤220cm、≤30kg。保留凭证，14:35回来取。",place:"n e s t Nankai Namba Station",kind:"event"},
+    {time:"10:35",title:"大阪高岛屋 B1 食品层",meta:"特色食品、点心、伴手礼",note:"先看保质期与包装体积；需要冷藏的食品不买，易碎品最后再装箱。",place:"Osaka Takashimaya",kind:"shopping"},
+    {time:"11:15",title:"いちびり庵 难波店",meta:"大阪主题伴手礼、冰箱贴、明信片",place:"Osaka Meibutsu Ichibirian Namba",kind:"shopping"},
+    {time:"11:45",title:"旭屋书店 难波CITY店",meta:"日文书、漫画、杂志与文具",place:"Asahiya Bookstore Namba City",kind:"shopping"},
+    {time:"12:25",title:"难波午餐",meta:"控制在35分钟内 · 就近解决",place:"Namba City restaurants",kind:"food"},
+    {time:"13:05",title:"日本桥二次元采购",meta:"Animate为主 · 骏河屋 / Mandarake按清单补漏",note:"14:00必须离开日本桥，不再临时增加远处门店。",place:"Animate Osaka Nipponbashi",kind:"shopping"},
+    {time:"14:10",title:"ZIPPO SPECIALTY NAKAMURA",meta:"世界纸卷烟、手卷烟、雪茄、烟斗与喫烟具",note:"难波站10号出口旁；周二10:00—19:30。普通卷烟可在值机前装入托运行李；若想买机场免税整条烟，改在T2安检后的TRK购买并随身登机。",place:"ZIPPO SPECIALTY NAKAMURA Osaka",kind:"shopping"},
+    {time:"14:35",title:"取行李、重新装箱",meta:"n・e・s・t 难波店 · 25分钟硬上限",note:"食品与纸制品防压；电子烟设备、充电宝和打火机留在随身行李。15:00必须进南海站。",place:"Nankai Namba Station Central Ticket Gate",kind:"event"},
+    {time:"15:00",title:"南海难波 → 关西机场",meta:"机场急行约45分钟 · ¥970",note:"不要推迟到15:30；抵达关西机场站后还要走到Aeroplaza 1F乘免费接驳巴士前往T2。",place:"Kansai Airport Station",kind:"move"},
+    {time:"16:05",title:"T2值机、托运与安检",meta:"为约19:30航班保留充足余量",note:"完成安检后可去TRK Duty Free补购免税烟；此时托运行李已经交运，免税品只能随身携带。",place:"Kansai International Airport Terminal 2",kind:"event"},
   ]},
 ];
 
@@ -90,8 +96,12 @@ const routes:Route[][]=[
     {after:9,time:"约 90 分",from:"KOBE BEEF DINING Mouriya",to:"Hotel Agora Regency 正门",fromAddress:"KOBE BEEF DINING モーリヤ, 〒650-0012 兵庫県神戸市中央区北長狭通1丁目9-10 カクテン屋ビル2F",toAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",line:"步行 → 阪神 → 南海",detail:"步行至阪神神户三宫站，直通大阪难波后换乘南海至堺",fare:"约 ¥710",alt:"JR 三之宫 → 新今宫 → 南海",altFare:"约 ¥940"},
   ],
   [
-    {after:1,time:"约 45 分",from:"Hotel Agora Regency 正门",to:"临空城站 2号出口",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"りんくうタウン駅 2番出口, 〒598-0048 大阪府泉佐野市りんくう往来北1",line:"南海本线 → 空港线",detail:"从酒店直连堺站西口；泉佐野方向，部分车次换乘",fare:"约 ¥640",alt:"南海机场急行至临空城",altFare:"同级约 ¥640"},
-    {after:4,time:"6 分",from:"临空城站 2号出口",to:"关西机场 T1 4F 国际出发层",fromAddress:"りんくうタウン駅 2番出口, 〒598-0048 大阪府泉佐野市りんくう往来北1",toAddress:"関西国際空港 第1ターミナル 4F 国際線出発, 〒549-0001 大阪府泉佐野市泉州空港北1",line:"JR / 南海空港线",detail:"15:25 → 15:31；下车后按航站楼标识移动",fare:"¥370",alt:"出租车 · 约 15 分",altFare:"约 ¥3,500",note:"若为 T2，抵达 T1 后还需前往 Aeroplaza 1F 搭免费接驳车。"},
+    {after:1,time:"约 25 分",from:"Hotel Agora Regency 正门",to:"n・e・s・t 难波店",fromAddress:"ホテル アゴーラ リージェンシー 大阪堺, 〒590-0985 大阪府堺市堺区戎島町4丁45-1",toAddress:"n・e・s・t 難波店, 南海なんば駅2階中央改札口正面, 〒542-8503 大阪府大阪市中央区難波5丁目1-60",line:"步行 → 南海本线",detail:"堺 → 南海难波；下车后上2楼中央检票口，柜台在改札外",fare:"约 ¥290 + 寄存 ¥800",alt:"若柜台满位，转难波CITY B2宅急便柜台或大型投币柜",altFare:"按现场价格",note:"28寸箱只要三边合计≤220cm、重量≤30kg即可；保留寄存凭证。"},
+    {after:2,time:"站内步行约 5 分",from:"n・e・s・t 难波店",to:"大阪高岛屋 B1 食品层",fromAddress:"n・e・s・t 難波店, 南海なんば駅2階中央改札口正面, 〒542-8503 大阪府大阪市中央区難波5丁目1-60",toAddress:"大阪髙島屋 地下1階, 〒542-8510 大阪府大阪市中央区難波5丁目1-5",line:"站内步行",detail:"从南海难波站向高岛屋方向下至B1",fare:"¥0",alt:"先去难波CITY购物，11:00后再回食品层",altFare:"¥0"},
+    {after:4,time:"步行约 8 分",from:"いちびり庵 难波店",to:"旭屋书店 难波CITY店",fromAddress:"大阪名物いちびり庵 なんば店, 〒542-0076 大阪府大阪市中央区難波3丁目2-28",toAddress:"旭屋書店 なんばCITY店, 〒542-0076 大阪府大阪市中央区難波5丁目1-60 なんばCITY南館B2F",line:"步行",detail:"返回南海难波站，进入难波CITY南馆B2",fare:"¥0",alt:"书籍较重时只买清单内项目",altFare:"¥0"},
+    {after:6,time:"步行约 12—15 分",from:"难波CITY",to:"Animate 大阪日本桥店",fromAddress:"なんばCITY 南館, 〒542-0076 大阪府大阪市中央区難波5丁目1-60",toAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",line:"步行",detail:"沿堺筋方向进入日本桥电电城",fare:"¥0",alt:"炎热或行李增加时乘出租车",altFare:"约 ¥800—1,000"},
+    {after:7,time:"步行约 15—20 分",from:"Animate 大阪日本桥店",to:"ZIPPO SPECIALTY NAKAMURA",fromAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",toAddress:"ZIPPO SPECIALTY NAKAMURA, 〒542-0076 大阪府大阪市中央区難波4丁目4-5",line:"步行",detail:"沿难波方向返回，店在地铁难波站10号出口旁",fare:"¥0",alt:"出租车约 5 分钟",altFare:"约 ¥800",note:"若只买常规整条烟且看重免税价格，可跳过此店，改去T2安检后TRK Duty Free。"},
+    {after:9,time:"约 65 分",from:"南海难波站",to:"关西机场 T2 国际出发",fromAddress:"南海 なんば駅 中央改札, 〒542-0076 大阪府大阪市中央区難波5丁目1-60",toAddress:"関西国際空港 第2ターミナル 国際線出発, 〒549-0011 大阪府泉南郡田尻町泉州空港中13",line:"南海机场急行 → T2免费接驳巴士",detail:"15:00前后发车；关西机场站下车后前往Aeroplaza 1F巴士站",fare:"南海约 ¥970 + 接驳 ¥0",alt:"Rapi:t 指定席升级",altFare:"基本车资外另付特急费用",note:"铁路到站不等于到T2；为步行、等车和约7—9分钟接驳车程预留20分钟。"},
   ],
 ];
 
@@ -117,9 +127,9 @@ const alternatives:Alternative[][]=[
     {trigger:"抵达神户较晚",title:"取消能福寺，北野后直达港湾",detail:"若 14:30 仍未离开北野，优先保证港湾休息与 19:00 晚餐，不再跨城赶寺院。",place:"Kobe Harborland umie",tag:"省力"},
   ],
   [
-    {trigger:"暴雨",title:"临空 SEACLE 室内线",detail:"车站直结，10:00—20:00；减少奥特莱斯露天步行，仍可用餐和补买日用品。",place:"Rinku Pleasure Town Seacle",tag:"雨天"},
-    {trigger:"行李或体力负担大",title:"提早前往关西机场",detail:"放弃购物，把时间用于值机、吃饭与航站楼移动；尤其适合 T2 航班。",place:"Kansai International Airport",tag:"省力"},
-    {trigger:"购物提前完成",title:"临空公园看海 30 分钟",detail:"天气舒适且时间充足时短暂停留；15:20 购物硬停止不变。",place:"Rinku Park Osaka",tag:"省力"},
+    {trigger:"n・e・s・t 满位",title:"切换难波CITY B2柜台或大型投币柜",detail:"先在南海难波站内解决寄存，不拖着28寸行李进入日本桥；仍找不到时直接缩短购物。",place:"Namba City South Building",tag:"延误"},
+    {trigger:"暴雨或高温",title:"高岛屋 + 难波CITY室内线",detail:"取消黑门与日本桥步行，只保留食品、伴手礼、书店和NAKAMURA；14:35照常取箱。",place:"Namba City Osaka",tag:"雨天"},
+    {trigger:"疲劳或时间不足",title:"14:00结束购物并提前去T2",detail:"二次元店与烟草店二选一；T2安检后仍可在TRK Duty Free补购常规免税烟。",place:"Kansai International Airport Terminal 2",tag:"省力"},
   ],
 ];
 
@@ -134,14 +144,14 @@ const checklist=[
   ["gogh","购买梵高与印象派展电子票或现场购票","P0"],
   ["loop-dinner","8/28 19:00 到酒店 1F 用餐","已预订"],
   ["trains","新干线已订；继续预订 8/30 近铁特急 21:59","P0"],
-  ["flight","补齐往返航班、航站楼与值机信息","P0"],
+  ["flight","确认9/1关西机场T2值机柜台与截止时间","P0"],
   ["beef","8/31 19:00 KOBE BEEF DINING Mouriya","已预订"],
   ["weather","出发前 7 天检查台风、花火公告与车次","7 DAYS"],
   ["offline","下载离线地图、保存酒店地址与本页","1 DAY"],
   ["gear","证件、双卡、eSIM、充电宝、雨具与补水","1 DAY"],
 ] as const;
 const sources=[
-  ["梵高与印象派展票务","https://www.aham.jp/exhibition/future/wallraf/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["京都御苑","https://fng.or.jp/kyoto/"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["关西机场休息室","https://www.kansai-airport.or.jp/en/service/lounge/credit-card"]
+  ["梵高与印象派展票务","https://www.aham.jp/exhibition/future/wallraf/"],["四日市花火官方","https://kankou43yokkaichi.com/hanabi/"],["免费区交通说明","https://kankou43yokkaichi.com/hanabi/access/no_ticket/"],["京都御苑","https://fng.or.jp/kyoto/"],["京都漫画博物馆","https://kyotomm.jp/en/opentime-cost/"],["n・e・s・t 行李寄存","https://www.nankai.co.jp/en/community/natts/nest/"],["NAKAMURA 烟草店","https://www.z-nakamura.com/pc/shopinfo.htm"],["T2 TRK Duty Free","https://www.kansai-airport.or.jp/en/shop/s141"]
 ];
 const bookings=[
   {day:"8.28",level:"已预订",title:"酒店 1F 晚餐",time:"19:00",detail:"预约已确认；人数、金额、菜单和预约编号不在公开网站展示。",price:"详情不公开",links:[["餐厅官方页面","https://www.agoraregency-sakai.com/restaurants/loop/"]]},
@@ -150,6 +160,7 @@ const bookings=[
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},
   {day:"8.30",level:"现场",title:"京都国际漫画博物馆",time:"10:20 入场",detail:"不要提前买电子票；到接待处出示当天有效的京都地铁一日券，成人票享八折。普通参观通常不会售罄。",price:"优惠后 ¥960",links:[["开放时间、票价与地铁券优惠","https://kyotomm.jp/en/opentime-cost/"]]},
   {day:"8.31",level:"已预订",title:"KOBE BEEF DINING Mouriya",time:"19:00 · 1 人",detail:"TableCheck 已确认：神户牛大腿牛排套餐 140g。费用当天到店支付；邮件菜单标签显示“午餐”，但预约日期与时间明确为 8/31 19:00。高峰时段晚餐限时 1 小时 50 分。",price:"到店支付 ¥6,950",links:[["查看预约邮件（需登录本人 Gmail）","https://mail.google.com/mail/#all/1a03d9ef83fc95b5"],["餐厅官方页面","https://www.mouriya.co.jp/dsb"],["Google Maps","https://www.google.com/maps/search/?api=1&query=KOBE+BEEF+DINING+Mouriya"]]},
+  {day:"9.01",level:"现场",title:"难波寄存 + T2返程",time:"10:15寄存 · 14:35取箱 · 15:00离开难波",detail:"28寸箱存南海难波站2楼n・e・s・t；购物结束后搭南海机场急行，到关西机场站再从Aeroplaza 1F乘免费巴士去T2。",price:"寄存 ¥800 / 交通约 ¥1,260",links:[["n・e・s・t 官方说明","https://www.nankai.co.jp/en/community/natts/nest/"],["NAKAMURA 官方店铺信息","https://www.z-nakamura.com/pc/shopinfo.htm"],["T2 TRK Duty Free","https://www.kansai-airport.or.jp/en/shop/s141"]]},
   {day:"8.29",level:"可选",title:"梅田蓝天大厦",time:"16:30 后视体力",detail:"不是行程硬点；决定登顶后再购票即可。大阪周游卡仅在规定时段免费，购买前核对当日规则。",price:"以官网当日票价为准",links:[["官方购票与营业信息","https://www.skybldg.co.jp/en/observatory/"]]},
   {day:"8.28",level:"可选",title:"Rapi:t β 舒适升级",time:"关西机场 → 堺",detail:"仅选 β；α 不停堺。若使用机场急行则无需预订。",price:"普通席约 ¥1,410",links:[["南海 Rapi:t 官方","https://www.howto-osaka.com/en/rapit/"],["HopeGoo 购票","https://www.hopegoo.com/zh-hk/shelves/?spu=SPU1871913195475755008"]]},
   {day:"8.31",level:"现场",title:"北野异人馆与能福寺",time:"13:00 北野 · 14:45 能福寺",detail:"风见鸡馆与萌黄之馆购买两馆联票；能福寺与兵库大佛免费参拜，无需预约。",price:"两馆联票 ¥800 / 能福寺 ¥0",links:[["北野异人馆官方信息","https://www.kobe-kazamidori.com/"],["能福寺 Google Maps","https://www.google.com/maps/search/?api=1&query=Nofukuji+Temple+Kobe"]]},
@@ -192,10 +203,10 @@ export default function Home(){
       </div>
     </section>
     <section className="booking" id="booking"><div className="booking-head"><div><p className="eyebrow">BOOKING DESK / 预订中心</p><h2>该订的，<br/>都在这里。</h2></div><p>按优先级集中所有购票与预约入口。点击按钮会打开对应的官方或指定平台页面；航班承运人尚未补齐，因此暂不能提供值机入口。</p></div><div className="booking-grid">{bookings.map((item,i)=><article key={item.title} className={`booking-card level-${item.level}`}><div className="booking-no">{String(i+1).padStart(2,"0")}</div><div className="booking-copy"><div className="booking-tags"><span>{item.level}</span><small>{item.day}</small></div><h3>{item.title}</h3><b>{item.time}</b><p>{item.detail}</p><strong>{item.price}</strong><div className="booking-links">{item.links.map(([label,url])=><a key={url} href={url} target="_blank" rel="noreferrer">{label} ↗</a>)}</div></div></article>)}</div></section>
-    <section className="overview" id="overview"><div><p className="eyebrow">TRIP AT A GLANCE</p><h2>一眼掌握<br/>整个旅程</h2></div><div className="metric"><strong>¥19,130</strong><span>预计交通</span></div><div className="metric"><strong>¥{(44130+(student?0:400)+shopping).toLocaleString()}</strong><span>当前总预算*</span></div><div className="metric"><strong>5</strong><span>旅行日</span></div><p className="overview-note">* 不含机票与酒店，已计入下方自定义购物预算。</p></section>
+    <section className="overview" id="overview"><div><p className="eyebrow">TRIP AT A GLANCE</p><h2>一眼掌握<br/>整个旅程</h2></div><div className="metric"><strong>¥19,380</strong><span>预计交通</span></div><div className="metric"><strong>¥{(44580+(student?0:400)+shopping).toLocaleString()}</strong><span>当前总预算*</span></div><div className="metric"><strong>5</strong><span>旅行日</span></div><p className="overview-note">* 不含机票与酒店，已计入下方自定义购物预算。</p></section>
     <section className="planning" id="budget">
       <div className="planning-head"><p className="eyebrow dark">MONEY & MOBILITY</p><h2>钱花在哪里，<br/>一目了然。</h2></div>
-      <div className="budget-card"><div className="budget-total"><small>预计总额</small><strong>¥{(42830+(student?0:400)+shopping).toLocaleString()}</strong><span>不含机酒</span></div><div className="bars"><div><span>餐饮 ¥21,500</span><i style={{width:"49%"}}/></div><div><span>交通 ¥19,130</span><i style={{width:"44%"}}/></div><div><span>门票 ¥{student?"3,700":"4,100"}</span><i style={{width:"11%"}}/></div></div><label className="toggle"><input type="checkbox" checked={student} onChange={e=>setStudent(e.target.checked)}/><span/> 使用梵高展学生票（需有效学生证）</label><label className="shop-input">购物预留 <span>¥</span><input type="number" min="0" step="1000" value={shopping} onChange={e=>setShopping(Math.max(0,Number(e.target.value)))}/></label></div>
+      <div className="budget-card"><div className="budget-total"><small>预计总额</small><strong>¥{(44580+(student?0:400)+shopping).toLocaleString()}</strong><span>不含机酒</span></div><div className="bars"><div><span>餐饮 ¥21,500</span><i style={{width:"48%"}}/></div><div><span>交通 ¥19,380</span><i style={{width:"43%"}}/></div><div><span>门票 ¥{student?"3,700":"4,100"}</span><i style={{width:"9%"}}/></div></div><label className="toggle"><input type="checkbox" checked={student} onChange={e=>setStudent(e.target.checked)}/><span/> 使用梵高展学生票（需有效学生证）</label><label className="shop-input">购物预留 <span>¥</span><input type="number" min="0" step="1000" value={shopping} onChange={e=>setShopping(Math.max(0,Number(e.target.value)))}/></label></div>
       <div className="passes-head"><div><small>PASS SELECTOR</small><h3>通票与周游券判断</h3></div><p>价格按 2026 年官方信息整理；特急指定席通常需要另付费用。</p></div>
       <div className="pass-grid">
         <article className="chosen"><span className="pass-status">推荐 · 8/29</span><b>Enjoy Eco Card</b><strong>¥620 <small>官方周末价</small></strong><p>覆盖大阪 Metro 与 Osaka City Bus；南海堺—难波仍另付往返 ¥580。</p><div className="seller-prices"><a href="https://www.hopegoo.com/zh-hk/shelves?spu=SPU1957362140442828800" target="_blank" rel="noreferrer"><span>HopeGoo 同类 QR 票</span><b>HK$63 起</b></a><a href="https://www.klook.com/zh-HK/activity/11515-osaka-metro-pass/" target="_blank" rel="noreferrer"><span>Klook 地铁＋巴士 1日</span><b>HK$50</b></a></div><a href="https://subway.osakametro.co.jp/guide/page/enjoy-eco.php" target="_blank" rel="noreferrer">官方说明 ↗</a></article>

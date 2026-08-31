@@ -52,16 +52,16 @@ const days: Day[] = [
   { date:"9.01",dow:"周二",city:"难波 · 日本桥 → 关西机场 T2",theme:"集中采购 · 返程",accent:"DEPARTURE",cost:"交通约 ¥1,260 · 寄存 ¥800",map:"Nankai Namba Station",stops:[
     {time:"08:00",title:"早餐、整理与称重",meta:"证件、充电宝、退税品最后检查",note:"普通卷烟可在值机前放入托运行李；电子烟、IQOS / Ploom / glo 设备和充电宝必须随身。打火机不要放入托运行李。",kind:"event"},
     {time:"09:30",title:"退房",meta:"全部行李带走 · 房间最终检查",place:"Hotel Agora Regency Osaka Sakai",kind:"event"},
-    {time:"10:15",title:"抵达难波并寄存28寸行李",meta:"n・e・s・t 难波店 · 2F中央改札口正面 · ¥800",note:"柜台在南海难波站2楼中央检票口正面、检票口外；官方限制为三边合计≤220cm、≤30kg。保留凭证，14:35回来取。",place:"n e s t Nankai Namba Station",kind:"event"},
+    {time:"10:15",title:"抵达难波并寄存28寸行李",meta:"n・e・s・t 难波店 · 2F中央改札口正面 · ¥800",note:"柜台在南海难波站2楼中央检票口正面、检票口外；官方限制为三边合计≤220cm、≤30kg。保留凭证，15:10回来取。",place:"n e s t Nankai Namba Station",kind:"event"},
     {time:"10:35",title:"大阪高岛屋 B1 食品层",meta:"特色食品、点心、伴手礼",note:"先看保质期与包装体积；需要冷藏的食品不买，易碎品最后再装箱。",place:"Osaka Takashimaya",kind:"shopping"},
     {time:"11:15",title:"いちびり庵 难波店",meta:"大阪主题伴手礼、冰箱贴、明信片",place:"Osaka Meibutsu Ichibirian Namba",kind:"shopping"},
     {time:"11:45",title:"旭屋书店 难波CITY店",meta:"日文书、漫画、杂志与文具",place:"Asahiya Bookstore Namba City",kind:"shopping"},
     {time:"12:25",title:"难波午餐",meta:"控制在35分钟内 · 就近解决",place:"Namba City restaurants",kind:"food"},
-    {time:"13:05",title:"日本桥二次元采购",meta:"Animate为主 · 骏河屋 / Mandarake按清单补漏",note:"14:00必须离开日本桥，不再临时增加远处门店。",place:"Animate Osaka Nipponbashi",kind:"shopping"},
-    {time:"14:10",title:"ZIPPO SPECIALTY NAKAMURA",meta:"世界纸卷烟、手卷烟、雪茄、烟斗与喫烟具",note:"难波站10号出口旁；周二10:00—19:30。普通卷烟可在值机前装入托运行李；若想买机场免税整条烟，改在T2安检后的TRK购买并随身登机。",place:"ZIPPO SPECIALTY NAKAMURA Osaka",kind:"shopping"},
-    {time:"14:35",title:"取行李、重新装箱",meta:"n・e・s・t 难波店 · 25分钟硬上限",note:"食品与纸制品防压；电子烟设备、充电宝和打火机留在随身行李。15:00必须进南海站。",place:"Nankai Namba Station Central Ticket Gate",kind:"event"},
-    {time:"15:00",title:"南海难波 → 关西机场",meta:"机场急行约45分钟 · ¥970",note:"不要推迟到15:30；抵达关西机场站后还要走到Aeroplaza 1F乘免费接驳巴士前往T2。",place:"Kansai Airport Station",kind:"move"},
-    {time:"16:05",title:"T2值机、托运与安检",meta:"为约19:30航班保留充足余量",note:"完成安检后可去TRK Duty Free补购免税烟；此时托运行李已经交运，免税品只能随身携带。",place:"Kansai International Airport Terminal 2",kind:"event"},
+    {time:"13:05",title:"日本桥二次元采购",meta:"Animate为主 · 骏河屋 / Mandarake按清单补漏",note:"14:20结束采购并返回难波，不再临时增加远处门店。",place:"Animate Osaka Nipponbashi",kind:"shopping"},
+    {time:"14:30",title:"ZIPPO SPECIALTY NAKAMURA",meta:"世界纸卷烟、手卷烟、雪茄、烟斗与喫烟具",note:"难波站10号出口旁；周二10:00—19:30。普通卷烟可在值机前装入托运行李；若想买机场免税整条烟，改在T2安检后的TRK购买并随身登机。",place:"ZIPPO SPECIALTY NAKAMURA Osaka",kind:"shopping"},
+    {time:"15:10",title:"取行李、重新装箱",meta:"n・e・s・t 难波店 · 25分钟硬上限",note:"食品与纸制品防压；电子烟设备、充电宝和打火机留在随身行李。15:40前进入南海站台。",place:"Nankai Namba Station Central Ticket Gate",kind:"event"},
+    {time:"15:45",title:"南海难波 → 关西机场",meta:"乘第一班可用机场急行 · 约45分钟 · ¥970",note:"15:40前进入站台；抵达关西机场站后走到Aeroplaza 1F乘免费接驳巴士前往T2。",place:"Kansai Airport Station",kind:"move"},
+    {time:"16:55",title:"抵达关西机场 T2",meta:"17:30开始值机、托运与安检",note:"先确认值机柜台位置；完成安检后可去TRK Duty Free补购免税烟。此时托运行李已经交运，免税品只能随身携带。",place:"Kansai International Airport Terminal 2",kind:"event"},
   ]},
 ];
 
@@ -101,7 +101,7 @@ const routes:Route[][]=[
     {after:4,time:"步行约 8 分",from:"いちびり庵 难波店",to:"旭屋书店 难波CITY店",fromAddress:"大阪名物いちびり庵 なんば店, 〒542-0076 大阪府大阪市中央区難波3丁目2-28",toAddress:"旭屋書店 なんばCITY店, 〒542-0076 大阪府大阪市中央区難波5丁目1-60 なんばCITY南館B2F",line:"步行",detail:"返回南海难波站，进入难波CITY南馆B2",fare:"¥0",alt:"书籍较重时只买清单内项目",altFare:"¥0"},
     {after:6,time:"步行约 12—15 分",from:"难波CITY",to:"Animate 大阪日本桥店",fromAddress:"なんばCITY 南館, 〒542-0076 大阪府大阪市中央区難波5丁目1-60",toAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",line:"步行",detail:"沿堺筋方向进入日本桥电电城",fare:"¥0",alt:"炎热或行李增加时乘出租车",altFare:"约 ¥800—1,000"},
     {after:7,time:"步行约 15—20 分",from:"Animate 大阪日本桥店",to:"ZIPPO SPECIALTY NAKAMURA",fromAddress:"アニメイト大阪日本橋, 〒556-0005 大阪府大阪市浪速区日本橋4丁目10-6",toAddress:"ZIPPO SPECIALTY NAKAMURA, 〒542-0076 大阪府大阪市中央区難波4丁目4-5",line:"步行",detail:"沿难波方向返回，店在地铁难波站10号出口旁",fare:"¥0",alt:"出租车约 5 分钟",altFare:"约 ¥800",note:"若只买常规整条烟且看重免税价格，可跳过此店，改去T2安检后TRK Duty Free。"},
-    {after:9,time:"约 65 分",from:"南海难波站",to:"关西机场 T2 国际出发",fromAddress:"南海 なんば駅 中央改札, 〒542-0076 大阪府大阪市中央区難波5丁目1-60",toAddress:"関西国際空港 第2ターミナル 国際線出発, 〒549-0011 大阪府泉南郡田尻町泉州空港中13",line:"南海机场急行 → T2免费接驳巴士",detail:"15:00前后发车；关西机场站下车后前往Aeroplaza 1F巴士站",fare:"南海约 ¥970 + 接驳 ¥0",alt:"Rapi:t 指定席升级",altFare:"基本车资外另付特急费用",note:"铁路到站不等于到T2；为步行、等车和约7—9分钟接驳车程预留20分钟。"},
+    {after:9,time:"约 65—80 分",from:"南海难波站",to:"关西机场 T2 国际出发",fromAddress:"南海 なんば駅 中央改札, 〒542-0076 大阪府大阪市中央区難波5丁目1-60",toAddress:"関西国際空港 第2ターミナル 国際線出発, 〒549-0011 大阪府泉南郡田尻町泉州空港中13",line:"南海机场急行 → T2免费接驳巴士",detail:"15:40前进站，乘第一班机场急行；关西机场站下车后前往Aeroplaza 1F巴士站",fare:"南海约 ¥970 + 接驳 ¥0",alt:"Rapi:t 指定席升级",altFare:"基本车资外另付特急费用",note:"目标16:50—17:05到T2；铁路到站不等于到T2，需另留步行、等车和接驳时间。"},
   ],
 ];
 
@@ -128,8 +128,8 @@ const alternatives:Alternative[][]=[
   ],
   [
     {trigger:"n・e・s・t 满位",title:"切换难波CITY B2柜台或大型投币柜",detail:"先在南海难波站内解决寄存，不拖着28寸行李进入日本桥；仍找不到时直接缩短购物。",place:"Namba City South Building",tag:"延误"},
-    {trigger:"暴雨或高温",title:"高岛屋 + 难波CITY室内线",detail:"取消黑门与日本桥步行，只保留食品、伴手礼、书店和NAKAMURA；14:35照常取箱。",place:"Namba City Osaka",tag:"雨天"},
-    {trigger:"疲劳或时间不足",title:"14:00结束购物并提前去T2",detail:"二次元店与烟草店二选一；T2安检后仍可在TRK Duty Free补购常规免税烟。",place:"Kansai International Airport Terminal 2",tag:"省力"},
+    {trigger:"暴雨或高温",title:"高岛屋 + 难波CITY室内线",detail:"取消黑门与日本桥步行，只保留食品、伴手礼、书店和NAKAMURA；15:10照常取箱。",place:"Namba City Osaka",tag:"雨天"},
+    {trigger:"疲劳或时间不足",title:"14:30结束购物并提前去T2",detail:"二次元店与烟草店二选一；T2安检后仍可在TRK Duty Free补购常规免税烟。",place:"Kansai International Airport Terminal 2",tag:"省力"},
   ],
 ];
 
@@ -160,7 +160,7 @@ const bookings=[
   {day:"8.30",level:"必须",title:"近铁四日市 → 大阪难波",time:"近铁特急 · 21:59—23:48",detail:"特急券从乘车日前 1 个月的 10:30 起售；基本车资另付。",price:"合计约 ¥3,800",links:[["近铁特急官方购票","https://www.ticket.kintetsu.co.jp/vs/en/T/TZZ/TZZ10.do?op=tDisplayVisitorMenu"],["车次查询","https://eki.kintetsu.co.jp/norikae/T7?dw=1&sf=4104&tx=1-9122"]]},
   {day:"8.30",level:"现场",title:"京都国际漫画博物馆",time:"10:20 入场",detail:"不要提前买电子票；到接待处出示当天有效的京都地铁一日券，成人票享八折。普通参观通常不会售罄。",price:"优惠后 ¥960",links:[["开放时间、票价与地铁券优惠","https://kyotomm.jp/en/opentime-cost/"]]},
   {day:"8.31",level:"已预订",title:"KOBE BEEF DINING Mouriya",time:"19:00 · 1 人",detail:"TableCheck 已确认：神户牛大腿牛排套餐 140g。费用当天到店支付；邮件菜单标签显示“午餐”，但预约日期与时间明确为 8/31 19:00。高峰时段晚餐限时 1 小时 50 分。",price:"到店支付 ¥6,950",links:[["查看预约邮件（需登录本人 Gmail）","https://mail.google.com/mail/#all/1a03d9ef83fc95b5"],["餐厅官方页面","https://www.mouriya.co.jp/dsb"],["Google Maps","https://www.google.com/maps/search/?api=1&query=KOBE+BEEF+DINING+Mouriya"]]},
-  {day:"9.01",level:"现场",title:"难波寄存 + T2返程",time:"10:15寄存 · 14:35取箱 · 15:00离开难波",detail:"28寸箱存南海难波站2楼n・e・s・t；购物结束后搭南海机场急行，到关西机场站再从Aeroplaza 1F乘免费巴士去T2。",price:"寄存 ¥800 / 交通约 ¥1,260",links:[["n・e・s・t 官方说明","https://www.nankai.co.jp/en/community/natts/nest/"],["NAKAMURA 官方店铺信息","https://www.z-nakamura.com/pc/shopinfo.htm"],["T2 TRK Duty Free","https://www.kansai-airport.or.jp/en/shop/s141"]]},
+  {day:"9.01",level:"现场",title:"难波寄存 + T2返程",time:"10:15寄存 · 15:10取箱 · 15:40前进站",detail:"28寸箱存南海难波站2楼n・e・s・t；乘第一班可用机场急行，到关西机场站再从Aeroplaza 1F乘免费巴士，目标17:00左右到T2，17:30开始值机。",price:"寄存 ¥800 / 交通约 ¥1,260",links:[["n・e・s・t 官方说明","https://www.nankai.co.jp/en/community/natts/nest/"],["NAKAMURA 官方店铺信息","https://www.z-nakamura.com/pc/shopinfo.htm"],["T2 TRK Duty Free","https://www.kansai-airport.or.jp/en/shop/s141"]]},
   {day:"8.29",level:"可选",title:"梅田蓝天大厦",time:"16:30 后视体力",detail:"不是行程硬点；决定登顶后再购票即可。大阪周游卡仅在规定时段免费，购买前核对当日规则。",price:"以官网当日票价为准",links:[["官方购票与营业信息","https://www.skybldg.co.jp/en/observatory/"]]},
   {day:"8.28",level:"可选",title:"Rapi:t β 舒适升级",time:"关西机场 → 堺",detail:"仅选 β；α 不停堺。若使用机场急行则无需预订。",price:"普通席约 ¥1,410",links:[["南海 Rapi:t 官方","https://www.howto-osaka.com/en/rapit/"],["HopeGoo 购票","https://www.hopegoo.com/zh-hk/shelves/?spu=SPU1871913195475755008"]]},
   {day:"8.31",level:"现场",title:"北野异人馆与能福寺",time:"13:00 北野 · 14:45 能福寺",detail:"风见鸡馆与萌黄之馆购买两馆联票；能福寺与兵库大佛免费参拜，无需预约。",price:"两馆联票 ¥800 / 能福寺 ¥0",links:[["北野异人馆官方信息","https://www.kobe-kazamidori.com/"],["能福寺 Google Maps","https://www.google.com/maps/search/?api=1&query=Nofukuji+Temple+Kobe"]]},
